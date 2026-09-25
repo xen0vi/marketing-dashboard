@@ -9,6 +9,7 @@
 <x-dc>
 <helmet>
 <title>Marketing Dashboard Demo</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%231f2937'/%3E%3Cpath d='M6 16V10M12 16V6M18 16v-4' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap">
 <style>
@@ -42,7 +43,7 @@ input::placeholder{color:#6b7280}
         <div style="width:24px; height:24px; border-radius:6px; background:#1f2937; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17V9M9 17V5M15 17v-7M21 17V11"></path></svg>
         </div>
-        <span style="font-size:13.5px; font-weight:500; color:#1f2937; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">Marketing Dashboard Demo</span>
+        <span style="font-size:13.5px; font-weight:500; color:#1f2937; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">Imad Tlais - Dashboard</span>
       </div>
       <button onClick="{{ collapseSidebar }}" aria-label="Collapse sidebar" style="width:28px; height:28px; display:flex; align-items:center; justify-content:center; border:0; background:transparent; border-radius:6px; color:#6b7280; cursor:pointer;" style-hover="background:#efefef; color:#1f2937">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M9 3v18"></path></svg>
@@ -118,8 +119,8 @@ input::placeholder{color:#6b7280}
     <button aria-label="Account menu" style="margin-top:10px; display:flex; align-items:center; gap:10px; width:100%; padding:9px 10px; border-radius:12px; border:0.8px solid #e5e7eb; background:#fff; box-shadow:0 1px 2px rgba(0,0,0,0.04); cursor:pointer; text-align:left; transition:box-shadow .25s, transform .15s;" style-hover="box-shadow:0 6px 16px rgba(0,0,0,0.08)" style-active="transform:scale(0.99)">
       <span style="position:relative; flex-shrink:0; width:34px; height:34px; border-radius:50%; background:#f7f7f7; border:0.8px solid #d9d9d9; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:500; color:#1f2937;">IT
         <span style="position:absolute; left:0; bottom:0; width:9px; height:9px;">
-          <span style="position:absolute; inset:0; border-radius:50%; background:#10b981; animation:ping 1.6s cubic-bezier(0,0,.2,1) infinite;"></span>
-          <span style="position:absolute; inset:0; border-radius:50%; background:#10b981; box-shadow:0 0 0 2px #fff;"></span>
+          <span style="position:absolute; inset:0; border-radius:50%; background:#3b82f6; animation:ping 1.6s cubic-bezier(0,0,.2,1) infinite;"></span>
+          <span style="position:absolute; inset:0; border-radius:50%; background:#3b82f6; box-shadow:0 0 0 2px #fff;"></span>
         </span>
       </span>
       <span style="flex:1; min-width:0; display:flex; flex-direction:column; line-height:1.3; justify-content:center;">
@@ -159,7 +160,7 @@ input::placeholder{color:#6b7280}
     <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-bottom:12px;">
       <div style="min-width:0;">
         <h1 style="margin:0; font-size:24px; font-weight:500; letter-spacing:-0.02em; display:flex; align-items:center; gap:8px;">Hello, Hiring Manager <span role="img" aria-label="waving hand" style="display:inline-block; transform-origin:70% 70%; animation:wave 1.8s ease .4s 1 both;">👋</span></h1>
-        <p style="margin:14px 0 0; font-size:14.5px; color:#4b5563;">Here's an example dashboard that I built. The numbers throughout are placeholders, but the Case Studies section includes my real work.</p>
+        <p style="margin: 14px 0 0; font-size: 14px; color: #4b5563">Here's an example dashboard that I built. The numbers throughout are placeholders, but the Case Studies section includes my real work.</p>
       </div>
       <div style="display:flex; align-items:center; gap:8px;">
         <div data-dd="range" style="position:relative;">
@@ -256,7 +257,7 @@ input::placeholder{color:#6b7280}
           <div style="flex:1; display:flex; flex-direction:column; background:#fff; border:0.8px solid #e5e7eb; border-radius:9px; padding:14px 14px 10px;">
             <div style="display:flex; align-items:baseline; gap:12px; padding:0 2px;">
               <span style="font-size:34px; font-weight:600; letter-spacing:-0.03em; line-height:1.1; font-variant-numeric:tabular-nums;">{{ chartTotal }}</span>
-              <span style="font-size:12.5px; color:#4b5563;"><span style="color:#059669;">{{ chartDelta }}</span> {{ chartPer }}</span>
+              <span style="font-size:12.5px; color:#4b5563;"><span style="color:#2563eb;">{{ chartDelta }}</span> {{ chartPer }}</span>
             </div>
             <div role="group" tabindex="0" aria-label="{{ chartAria }}" onKeyDown="{{ chartKey }}" onMouseLeave="{{ chartLeave }}" style="flex:1; min-height:230px; display:flex; flex-direction:column; margin-top:18px; outline:none; border-radius:6px;">
               <div style="flex:1; display:flex; gap:10px;">
@@ -302,7 +303,7 @@ input::placeholder{color:#6b7280}
           <div style="background:#fff; border:0.8px solid #e5e7eb; border-radius:9px; padding:4px; display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:4px;">
             <sc-for list="{{ cs.roles }}" as="r" hint-placeholder-count="2">
               <button onClick="{{ r.onOverviewClick }}" style="display:flex; flex-direction:column; gap:6px; text-align:left; padding:14px; border-radius:8px; border:0; background:transparent; cursor:pointer;" style-hover="background:#fafafa">
-                <span style="display:flex; justify-content:space-between; gap:8px; font-size:12px; color:#6b7280;"><span>{{ r.company }}</span><span style="color:#059669; font-weight:500;">{{ r.tag }}</span></span>
+                <span style="display:flex; justify-content:space-between; gap:8px; font-size:12px; color:#6b7280;"><span>{{ r.company }}</span><span style="color:#2563eb; font-weight:500;">{{ r.tag }}</span></span>
                 <span style="font-size:13px; color:#4b5563;">{{ r.title }}</span>
               </button>
             </sc-for>
@@ -622,7 +623,7 @@ input::placeholder{color:#6b7280}
       <div role="tablist" aria-label="Role" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:12px;">
         <sc-for list="{{ cs.roles }}" as="r" hint-placeholder-count="3">
           <button role="tab" aria-selected="{{ r.on }}" onClick="{{ r.onClick }}" style="display:flex; flex-direction:column; gap:6px; text-align:left; padding:14px 16px; border-radius:12px; border:0.8px solid {{ r.bd }}; background:{{ r.bg }}; box-shadow:{{ r.shadow }}; cursor:pointer; transition:box-shadow .25s, border-color .25s, transform .15s; animation:rise .52s cubic-bezier(.16,1,.3,1) both; animation-delay:{{ r.delay }};" style-active="transform:scale(0.99)">
-            <span style="display:flex; justify-content:space-between; gap:8px; font-size:12px; color:#6b7280;"><span>{{ r.dates }}</span><span style="color:#059669; font-weight:500;">{{ r.tag }}</span></span>
+            <span style="display:flex; justify-content:space-between; gap:8px; font-size:12px; color:#6b7280;"><span>{{ r.dates }}</span><span style="color:#2563eb; font-weight:500;">{{ r.tag }}</span></span>
             <span style="font-size:15px; font-weight:500; color:#1f2937;">{{ r.company }}</span>
             <span style="font-size:12.5px; color:#4b5563;">{{ r.title }}</span>
           </button>
@@ -636,8 +637,9 @@ input::placeholder{color:#6b7280}
           <div style="background:#fff; border:0.8px solid #e5e7eb; border-radius:9px; padding:24px; display:flex; flex-direction:column; gap:24px;">
             <div style="max-width:780px;">
               <div style="font-size:12px; letter-spacing:.06em; color:#6b7280;">CASE STUDY 01</div>
-              <h2 style="margin:8px 0 0; font-size:28px; font-weight:500; letter-spacing:-0.02em; line-height:1.2; text-wrap:balance;">Built a qualified sales pipeline from zero at $150–250 per qualified lead</h2>
+              <h2 style="margin:8px 0 0; font-size:28px; font-weight:500; letter-spacing:-0.02em; line-height:1.2; text-wrap:balance;">Built a qualified sales pipeline from zero at $150–200 per qualified lead</h2>
               <p style="margin:12px 0 0; font-size:14px; line-height:1.6; color:#4b5563; text-wrap:pretty;">Ran Meta, Google and LinkedIn Ads for DecidrOS, Sugarwork and Partnerships. I moved acquisition away from low-intent traffic and towards senior decision-makers at businesses with 200+ employees, so leads turned into real opportunities. I reported directly to the Marketing Director and CTO.</p>
+              <p style="margin:12px 0 0; font-size:13.5px; line-height:1.65; color:#4b5563; text-wrap:pretty;">Before writing any ads, I read 20 Reddit posts and comment threads where senior ops and finance people complained about the exact problem DecidrOS solves, and wrote the headlines in their own words. That's what the AI Roadmap page was tested against. My first pass used generic AI-productivity messaging and pulled cheap clicks that never became qualified leads, so I killed it after a week instead of letting it keep burning budget. Founder-video creative also lost to static case studies with cold LinkedIn audiences, the opposite of what I expected, so I moved the budget to case studies and kept video for retargeting warm traffic.</p>
               <div style="display:flex; flex-wrap:wrap; gap:6px; margin-top:14px;">
                 <sc-for list="{{ cs.dec.chips }}" as="c" hint-placeholder-count="6"><span style="height:24px; padding:0 9px; display:flex; align-items:center; border:0.8px solid #e5e7eb; border-radius:12px; font-size:12px; color:#4b5563; background:#fafafa;">{{ c }}</span></sc-for>
               </div>
@@ -656,22 +658,22 @@ input::placeholder{color:#6b7280}
 
         <div style="display:flex; flex-wrap:wrap; gap:16px;">
           <section aria-label="Cost per qualified lead" style="display:flex; flex-direction:column; flex:999 1 520px; min-width:0; background-color:#f6f6f6; background-image:repeating-linear-gradient(135deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 7px); border:0.8px solid #ececec; border-radius:12px; padding:4px; animation:rise .52s cubic-bezier(.16,1,.3,1) .08s both;">
-            <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; padding:6px 8px 8px;"><h3 style="margin:0; font-size:14px; font-weight:400;">Cost per qualified lead, weekly</h3><span style="display:flex; align-items:center; gap:6px; font-size:12px; color:#4b5563;"><span style="width:14px; height:8px; border-radius:2px; background:rgba(5,150,105,0.14); border:1px dashed rgba(5,150,105,0.6);"></span>Target band $150–250</span></div>
+            <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; padding:6px 8px 8px;"><h3 style="margin:0; font-size:14px; font-weight:400;">Cost per qualified lead, weekly</h3><span style="display:flex; align-items:center; gap:6px; font-size:12px; color:#4b5563;"><span style="width:14px; height:8px; border-radius:2px; background:rgba(37,99,235,0.14); border:1px dashed rgba(37,99,235,0.6);"></span>Target band $150–200</span></div>
             <div style="flex:1; background:#fff; border:0.8px solid #e5e7eb; border-radius:9px; padding:20px 16px 12px;">
               <div onMouseLeave="{{ cs.leave }}" style="position:relative; height:220px; margin:10px 40px 0 0;">
                 <sc-for list="{{ cs.dec.cpql.grid }}" as="g" hint-placeholder-count="5">
                   <div style="position:absolute; left:0; right:0; top:{{ g.top }}; border-top:1px solid #f2f2f3;"></div>
                   <span style="position:absolute; right:-40px; top:{{ g.top }}; transform:translateY(-50%); font-size:12px; color:#4b5563;">{{ g.label }}</span>
                 </sc-for>
-                <div style="position:absolute; left:0; right:0; top:{{ cs.dec.cpql.band.top }}; height:{{ cs.dec.cpql.band.h }}; background:rgba(5,150,105,0.07); border-top:1px dashed rgba(5,150,105,0.5); border-bottom:1px dashed rgba(5,150,105,0.5);"></div>
+                <div style="position:absolute; left:0; right:0; top:{{ cs.dec.cpql.band.top }}; height:{{ cs.dec.cpql.band.h }}; background:rgba(37,99,235,0.07); border-top:1px dashed rgba(37,99,235,0.5); border-bottom:1px dashed rgba(37,99,235,0.5);"></div>
                 <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="position:absolute; inset:0; width:100%; height:100%; overflow:visible; animation:drawx 1.4s cubic-bezier(.16,1,.3,1) .2s both;">
-                  <defs><linearGradient id="csgDec" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1f2937" stop-opacity="0.14"></stop><stop offset="1" stop-color="#1f2937" stop-opacity="0"></stop></linearGradient></defs>
+                  <defs><linearGradient id="csgDec" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2563eb" stop-opacity="0.16"></stop><stop offset="1" stop-color="#2563eb" stop-opacity="0"></stop></linearGradient></defs>
                   <path d="{{ cs.dec.cpql.area }}" fill="url(#csgDec)"></path>
-                  <path d="{{ cs.dec.cpql.line }}" fill="none" stroke="#1f2937" stroke-width="1.8" stroke-linejoin="round" vector-effect="non-scaling-stroke"></path>
+                  <path d="{{ cs.dec.cpql.line }}" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-linejoin="round" vector-effect="non-scaling-stroke"></path>
                 </svg>
                 <sc-for list="{{ cs.dec.cpql.dots }}" as="d" hint-placeholder-count="18">
                   <div onMouseEnter="{{ d.onEnter }}" style="position:absolute; left:{{ d.left }}; top:{{ d.top }}; width:20px; height:20px; transform:translate(-50%,-50%); display:flex; align-items:center; justify-content:center; cursor:pointer;">
-                    <span style="width:{{ d.size }}; height:{{ d.size }}; border-radius:50%; background:{{ d.bg }}; box-shadow:0 0 0 1.5px #1f2937; transition:all .2s;"></span>
+                    <span style="width:{{ d.size }}; height:{{ d.size }}; border-radius:50%; background:{{ d.bgG }}; box-shadow:0 0 0 1.5px #2563eb; transition:all .2s;"></span>
                   </div>
                 </sc-for>
                 <div style="position:absolute; left:{{ cs.dec.cpql.tip.left }}; top:{{ cs.dec.cpql.tip.top }}; transform:{{ cs.dec.cpql.tip.tf }}; background:#1f2937; color:#fff; font-size:12px; font-weight:500; padding:4px 8px; border-radius:6px; white-space:nowrap; pointer-events:none; box-shadow:0 4px 12px rgba(31,41,55,0.25); transition:all .25s cubic-bezier(.16,1,.3,1);">{{ cs.dec.cpql.tip.text }}</div>
@@ -683,13 +685,13 @@ input::placeholder{color:#6b7280}
           </section>
 
           <section aria-label="Traffic mix" style="display:flex; flex-direction:column; flex:1 1 320px; min-width:0; background-color:#f6f6f6; background-image:repeating-linear-gradient(135deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 7px); border:0.8px solid #ececec; border-radius:12px; padding:4px; animation:rise .52s cubic-bezier(.16,1,.3,1) .14s both;">
-            <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; padding:6px 8px 8px;"><h3 style="margin:0; font-size:14px; font-weight:400;">Traffic mix shift</h3><span style="display:flex; align-items:center; gap:10px; font-size:12px; color:#4b5563;"><span style="display:flex; align-items:center; gap:5px;"><span style="width:8px; height:8px; border-radius:2px; background:#1f2937;"></span>Qualified</span><span style="display:flex; align-items:center; gap:5px;"><span style="width:8px; height:8px; border-radius:2px; background:#e6e6e6;"></span>Low-intent</span></span></div>
+            <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; padding:6px 8px 8px;"><h3 style="margin:0; font-size:14px; font-weight:400;">Traffic mix shift</h3><span style="display:flex; align-items:center; gap:10px; font-size:12px; color:#4b5563;"><span style="display:flex; align-items:center; gap:5px;"><span style="width:8px; height:8px; border-radius:2px; background:#2563eb;"></span>Qualified</span><span style="display:flex; align-items:center; gap:5px;"><span style="width:8px; height:8px; border-radius:2px; background:#e6e6e6;"></span>Low-intent</span></span></div>
             <div style="flex:1; background:#fff; border:0.8px solid #e5e7eb; border-radius:9px; padding:20px 16px 12px;">
               <div style="height:230px; display:flex; align-items:flex-end; gap:14px;">
                 <sc-for list="{{ cs.dec.mix }}" as="m" hint-placeholder-count="5">
                   <div style="flex:1; height:100%; display:flex; flex-direction:column; justify-content:flex-end; border-radius:7px; overflow:hidden; transform-origin:bottom; animation:growy .9s cubic-bezier(.16,1,.3,1) both; animation-delay:{{ m.delay }};">
                     <div style="height:{{ m.low }}; background:#ededed; border:0.8px solid #d8d8d8; border-bottom:0; border-radius:7px 7px 0 0;"></div>
-                    <div style="height:{{ m.q }}; background:linear-gradient(180deg,#37475d,#1f2937); display:flex; align-items:flex-start; justify-content:center; padding-top:8px; color:#fff; font-size:12px; font-weight:500; font-variant-numeric:tabular-nums;">{{ m.label }}</div>
+                    <div style="height:{{ m.q }}; background:linear-gradient(180deg,#3b82f6,#2563eb); display:flex; align-items:flex-start; justify-content:center; padding-top:8px; color:#fff; font-size:12px; font-weight:500; font-variant-numeric:tabular-nums;">{{ m.label }}</div>
                   </div>
                 </sc-for>
               </div>
@@ -750,6 +752,7 @@ input::placeholder{color:#6b7280}
               <div style="font-size:12px; letter-spacing:.06em; color:#6b7280;">CASE STUDY 02</div>
               <h2 style="margin:8px 0 0; font-size:28px; font-weight:500; letter-spacing:-0.02em; line-height:1.2; text-wrap:balance;">Cut cost per lead by about 64% and lifted lead-to-MQL rate by more than 50%</h2>
               <p style="margin:12px 0 0; font-size:14px; line-height:1.6; color:#4b5563; text-wrap:pretty;">I owned Meta, Google and LinkedIn Ads end to end, from strategy and budget through to optimisation and reporting. Every campaign was tested and tuned against lead quality rather than volume, and lead volume kept growing month on month, ahead of target.</p>
+              <p style="margin:12px 0 0; font-size:13.5px; line-height:1.65; color:#4b5563; text-wrap:pretty;">Cost per lead started bad because I was optimising Meta for cheap clicks instead of qualified form fills. I moved the bidding goal to leads and let cost climb short-term while the funnel improved. Broad interest-based targeting on LinkedIn brought volume but terrible MQL rates, so I switched to narrower job-title and company-size targeting. Fewer clicks and more expensive ones, but the lead-to-MQL numbers paid for it. A long-form video series I pushed for a full quarter never beat static creative on cost per lead. I cut it, even though I'd wanted the format to work.</p>
               <div style="display:flex; flex-wrap:wrap; gap:6px; margin-top:14px;">
                 <sc-for list="{{ cs.air.chips }}" as="c" hint-placeholder-count="6"><span style="height:24px; padding:0 9px; display:flex; align-items:center; border:0.8px solid #e5e7eb; border-radius:12px; font-size:12px; color:#4b5563; background:#fafafa;">{{ c }}</span></sc-for>
               </div>
@@ -768,23 +771,23 @@ input::placeholder{color:#6b7280}
 
         <div style="display:flex; flex-wrap:wrap; gap:16px;">
           <section aria-label="Cost per lead" style="display:flex; flex-direction:column; flex:999 1 520px; min-width:0; background-color:#f6f6f6; background-image:repeating-linear-gradient(135deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 7px); border:0.8px solid #ececec; border-radius:12px; padding:4px; animation:rise .52s cubic-bezier(.16,1,.3,1) .08s both;">
-            <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; padding:6px 8px 8px;"><h3 style="margin:0; font-size:14px; font-weight:400;">Cost per lead, quarterly</h3><span style="display:flex; align-items:center; gap:6px; font-size:12px; color:#4b5563;"><span style="width:14px; height:8px; border-radius:2px; background:rgba(5,150,105,0.14); border:1px dashed rgba(5,150,105,0.6);"></span>End range $80–120</span></div>
+            <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; padding:6px 8px 8px;"><h3 style="margin:0; font-size:14px; font-weight:400;">Cost per lead, quarterly</h3><span style="display:flex; align-items:center; gap:6px; font-size:12px; color:#4b5563;"><span style="width:14px; height:8px; border-radius:2px; background:rgba(37,99,235,0.14); border:1px dashed rgba(37,99,235,0.6);"></span>End range $80–120</span></div>
             <div style="flex:1; background:#fff; border:0.8px solid #e5e7eb; border-radius:9px; padding:20px 16px 12px;">
-              <div style="display:flex; align-items:baseline; gap:12px; margin-bottom:6px;"><span style="font-size:30px; letter-spacing:-0.03em;">−64%</span><span style="font-size:12.5px; color:#4b5563;"><span style="color:#059669;">$275 → $100</span> midpoint CPL</span></div>
+              <div style="display:flex; align-items:baseline; gap:12px; margin-bottom:6px;"><span style="font-size:30px; letter-spacing:-0.03em;">−64%</span><span style="font-size:12.5px; color:#4b5563;"><span style="color:#2563eb;">$275 → $100</span> midpoint CPL</span></div>
               <div onMouseLeave="{{ cs.leave }}" style="position:relative; height:220px; margin:10px 40px 0 0;">
                 <sc-for list="{{ cs.air.cpl.grid }}" as="g" hint-placeholder-count="5">
                   <div style="position:absolute; left:0; right:0; top:{{ g.top }}; border-top:1px solid #f2f2f3;"></div>
                   <span style="position:absolute; right:-40px; top:{{ g.top }}; transform:translateY(-50%); font-size:12px; color:#4b5563;">{{ g.label }}</span>
                 </sc-for>
-                <div style="position:absolute; left:0; right:0; top:{{ cs.air.cpl.band.top }}; height:{{ cs.air.cpl.band.h }}; background:rgba(5,150,105,0.07); border-top:1px dashed rgba(5,150,105,0.5); border-bottom:1px dashed rgba(5,150,105,0.5);"></div>
+                <div style="position:absolute; left:0; right:0; top:{{ cs.air.cpl.band.top }}; height:{{ cs.air.cpl.band.h }}; background:rgba(37,99,235,0.07); border-top:1px dashed rgba(37,99,235,0.5); border-bottom:1px dashed rgba(37,99,235,0.5);"></div>
                 <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="position:absolute; inset:0; width:100%; height:100%; overflow:visible; animation:drawx 1.4s cubic-bezier(.16,1,.3,1) .2s both;">
-                  <defs><linearGradient id="csgAir" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#059669" stop-opacity="0.16"></stop><stop offset="1" stop-color="#059669" stop-opacity="0"></stop></linearGradient></defs>
+                  <defs><linearGradient id="csgAir" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2563eb" stop-opacity="0.16"></stop><stop offset="1" stop-color="#2563eb" stop-opacity="0"></stop></linearGradient></defs>
                   <path d="{{ cs.air.cpl.area }}" fill="url(#csgAir)"></path>
-                  <path d="{{ cs.air.cpl.line }}" fill="none" stroke="#059669" stroke-width="1.8" stroke-linejoin="round" vector-effect="non-scaling-stroke"></path>
+                  <path d="{{ cs.air.cpl.line }}" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-linejoin="round" vector-effect="non-scaling-stroke"></path>
                 </svg>
                 <sc-for list="{{ cs.air.cpl.dots }}" as="d" hint-placeholder-count="15">
                   <div onMouseEnter="{{ d.onEnter }}" style="position:absolute; left:{{ d.left }}; top:{{ d.top }}; width:20px; height:20px; transform:translate(-50%,-50%); display:flex; align-items:center; justify-content:center; cursor:pointer;">
-                    <span style="width:{{ d.size }}; height:{{ d.size }}; border-radius:50%; background:{{ d.bgG }}; box-shadow:0 0 0 1.5px #059669; transition:all .2s;"></span>
+                    <span style="width:{{ d.size }}; height:{{ d.size }}; border-radius:50%; background:{{ d.bgG }}; box-shadow:0 0 0 1.5px #2563eb; transition:all .2s;"></span>
                   </div>
                 </sc-for>
                 <div style="position:absolute; left:{{ cs.air.cpl.tip.left }}; top:{{ cs.air.cpl.tip.top }}; transform:{{ cs.air.cpl.tip.tf }}; background:#1f2937; color:#fff; font-size:12px; font-weight:500; padding:4px 8px; border-radius:6px; white-space:nowrap; pointer-events:none; box-shadow:0 4px 12px rgba(31,41,55,0.25); transition:all .25s cubic-bezier(.16,1,.3,1);">{{ cs.air.cpl.tip.text }}</div>
@@ -818,7 +821,7 @@ input::placeholder{color:#6b7280}
           <section aria-label="Lead volume growth" style="display:flex; flex-direction:column; flex:999 1 520px; min-width:0; background-color:#f6f6f6; background-image:repeating-linear-gradient(135deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 7px); border:0.8px solid #ececec; border-radius:12px; padding:4px; animation:rise .52s cubic-bezier(.16,1,.3,1) .2s both;">
             <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; padding:6px 8px 8px;"><h3 style="margin:0; font-size:14px; font-weight:400;">Lead volume, month on month</h3><span style="font-size:12px; color:#6b7280;">Indexed, month 1 = 100</span></div>
             <div style="flex:1; background:#fff; border:0.8px solid #e5e7eb; border-radius:9px; padding:20px 16px 12px;">
-              <div style="display:flex; align-items:baseline; gap:12px; margin-bottom:6px;"><span style="font-size:30px; letter-spacing:-0.03em;">3.1×</span><span style="font-size:12.5px; color:#4b5563;"><span style="color:#059669;">+10–50%</span> growth each month, depending on channel and campaign</span></div>
+              <div style="display:flex; align-items:baseline; gap:12px; margin-bottom:6px;"><span style="font-size:30px; letter-spacing:-0.03em;">3.1×</span><span style="font-size:12.5px; color:#4b5563;"><span style="color:#2563eb;">+10–50%</span> growth each month, depending on channel and campaign</span></div>
               <div style="height:210px; display:flex; align-items:flex-end; gap:12px; margin-top:10px;">
                 <sc-for list="{{ cs.air.vol }}" as="b" hint-placeholder-count="8">
                   <div style="flex:1; height:100%; display:flex; flex-direction:column; justify-content:flex-end; align-items:center; gap:6px;">
@@ -967,7 +970,7 @@ input::placeholder{color:#6b7280}
             <sc-for list="{{ aud.company }}" as="b" hint-placeholder-count="4">
               <div style="display:flex; align-items:center; gap:10px; height:38px; animation:rise .52s cubic-bezier(.16,1,.3,1) both; animation-delay:{{ b.delay }};">
                 <span style="width:96px; flex-shrink:0; font-size:12.5px; color:#4b5563;">{{ b.label }}</span>
-                <span style="flex:1; height:8px; border-radius:4px; background:#f3f4f6; overflow:hidden;"><span style="display:block; height:100%; width:{{ b.w }}; border-radius:4px; background:#059669; transform-origin:left; animation:drawx 1.1s cubic-bezier(.16,1,.3,1) both; animation-delay:{{ b.delay }};"></span></span>
+                <span style="flex:1; height:8px; border-radius:4px; background:#f3f4f6; overflow:hidden;"><span style="display:block; height:100%; width:{{ b.w }}; border-radius:4px; background:#2563eb; transform-origin:left; animation:drawx 1.1s cubic-bezier(.16,1,.3,1) both; animation-delay:{{ b.delay }};"></span></span>
                 <span style="width:40px; text-align:right; font-size:12.5px; font-variant-numeric:tabular-nums; color:#1f2937;">{{ b.pct }}</span>
               </div>
             </sc-for>
@@ -1002,8 +1005,8 @@ input::placeholder{color:#6b7280}
         <div style="background:#fff; border:0.8px solid #e5e7eb; border-radius:9px; padding:20px; display:flex; flex-direction:column; gap:14px;">
           <sc-if value="{{ fbSent }}" hint-placeholder-val="{{ false }}">
             <div style="display:flex; flex-direction:column; align-items:center; text-align:center; padding:28px 12px; animation:fade .3s both;">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"></path></svg>
-              <div style="margin-top:12px; font-size:14px; font-weight:500;">Thanks — feedback sent</div>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"></path></svg>
+              <div style="margin-top:12px; font-size:14px; font-weight:500;">Thanks, feedback sent</div>
             </div>
           </sc-if>
           <sc-if value="{{ fbNotSent }}" hint-placeholder-val="{{ true }}">
@@ -1019,15 +1022,15 @@ input::placeholder{color:#6b7280}
 
     
             </div>
-          </sc-for>
-        </div>
-      </div>
-    </div>
-    </sc-if>
+          
+        </main></div>
+      
+    
+    
 
     
-  </div>
-</main>
+  
+
 
 <sc-if value="{{ cmpMenu }}" hint-placeholder-val="{{ false }}">
   <div data-dd="crow" role="menu" style="position:fixed; top:{{ cmpMenu.top }}; right:{{ cmpMenu.right }}; width:190px; background:#fff; border:0.8px solid #e5e7eb; border-radius:8px; box-shadow:0 10px 30px rgba(0,0,0,0.1); padding:4px; z-index:60; animation:rise .25s cubic-bezier(.16,1,.3,1) both;">
@@ -1053,7 +1056,7 @@ input::placeholder{color:#6b7280}
     </sc-for>
   </div>
 </sc-if>
-</div>
+
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{}">
 const RANGES = ['This week', 'This month', 'Last month'];
@@ -1086,13 +1089,13 @@ const CHART = {
   'This month': { total: 5420, delta: 7.2, yMax: 600, labels: monthLabels(0), values: [312, 358, 296, 402, 428, 351, 384, 466, 419, 332, 407, 488, 371, 406] },
   'Last month': { total: 5056, delta: 3.1, yMax: 600, labels: monthLabels(1), values: [298, 341, 312, 376, 344, 402, 358, 421, 367, 322, 389, 436, 351, 339] }
 };
-const TYPE = { email: '#2563eb', social: '#059669', ad: '#7c3aed', alert: '#dc2626', blog: '#0891b2', review: '#d97706' };
+const TYPE = { email: '#2563eb', social: '#2563eb', ad: '#7c3aed', alert: '#dc2626', blog: '#0891b2', review: '#d97706' };
 const CONTENT = {
   Today: [
     ['email', 'Nurture Sequence Sent', '11:20 AM', '**Q3 Webinar Follow-up** sent to **2,400** leads'],
     ['social', 'New Segment Created', '11:15 AM', '**High-Intent Visitors** audience built'],
     ['ad', 'Lead Form Live', '11:00 AM', '**LinkedIn Lead Gen Form** now collecting demo requests'],
-    ['alert', 'CPL Alert', '10:45 AM', '**Google Ads — Competitor Keywords** CPL above **$60** target'],
+    ['alert', 'CPL Alert', '10:45 AM', '**Google Ads: Competitor Keywords** CPL above **$60** target'],
     ['blog', 'Content Published', '10:30 AM', 'New guide live: **"The B2B Demand Gen Playbook"**'],
     ['review', 'MQL Milestone', '10:30 AM', '**Enterprise ABM** passed **100 MQLs** this month'],
     ['email', 'Campaign Completed', '09:58 AM', '**Spring Webinar Series** wrapped, **312** registrants'],
@@ -1100,7 +1103,7 @@ const CONTENT = {
   ],
   Yesterday: [
     ['email', 'Newsletter Sent', '5:40 PM', '**Monthly Insights** delivered to **18,900** subscribers'],
-    ['ad', 'Ad Set Approved', '4:12 PM', '**Meta — Lookalike 2%** lead ads now live'],
+    ['ad', 'Ad Set Approved', '4:12 PM', '**Meta: Lookalike 2%** lead ads now live'],
     ['blog', 'Case Study Updated', '2:30 PM', '**"How Acme Cut CPL by 38%"** refreshed with new data'],
     ['alert', 'Low Lead Quality', '1:05 PM', '**Display Remarketing** MQL rate dropped to **6%**'],
     ['social', 'Post Trending', '11:48 AM', '**LinkedIn carousel** drove **46** demo requests'],
@@ -1112,87 +1115,93 @@ const CONTENT = {
     ['ad', 'Demo Request Campaign', '$38 CPL', '**Performance Max** generated **148** demo requests'],
     ['blog', 'B2B Demand Gen Playbook', '640 downloads', 'Gated guide converting at **18%**'],
     ['review', 'MQL to SQL', '+14 SQLs', '**Sales accepted** 14 new opportunities'],
-    ['alert', 'Google Ads Budget', '92% spent', '**Brand Search — Q3** will cap in **2 days**'],
+    ['alert', 'Google Ads Budget', '92% spent', '**Brand Search: Q3** will cap in **2 days**'],
     ['social', 'Partner Referral Program', '86 leads', '**Michael Wong** onboarded **3** new partners']
   ]
 };
 const TIER = { Red: { label: 'High', color: '#ef4444', rank: 3 }, Orange: { label: 'Medium', color: '#f97316', rank: 2 }, Yellow: { label: 'Low', color: '#eab308', rank: 1 } };
 const CH = { Paid: ['#ef4444', 3], Social: ['#f97316', 2], Email: ['#eab308', 1] };
-const ST = { Live: '#2563eb', Scheduled: '#ea580c', Ended: '#059669' };
+const ST = { Live: '#2563eb', Scheduled: '#ea580c', Ended: '#2563eb' };
 const OWNERS = { 'John Doe': ['JD', '#e0e7ff', '#3730a3'], 'Sarah Lee': ['SL', '#fce7f3', '#9d174d'], 'Michael Wong': ['MW', '#dcfce7', '#166534'], 'Priya Patel': ['PP', '#fef3c7', '#92400e'], 'Imad Tlais': ['IT', '#e0f2fe', '#075985'] };
 const ROWS = [
-  { id: 1, name: 'Webinar Nurture — Q3', channel: 'Email', tier: 'Yellow', owner: 'John Doe', status: 'Live', date: '2025-08-18', budget: 342 },
-  { id: 2, name: 'Retargeting — Pricing Page Visitors', channel: 'Paid', tier: 'Red', owner: 'Sarah Lee', status: 'Scheduled', date: '2025-08-19', budget: 128 },
+  { id: 1, name: 'Webinar Nurture: Q3', channel: 'Email', tier: 'Yellow', owner: 'John Doe', status: 'Live', date: '2025-08-18', budget: 342 },
+  { id: 2, name: 'Retargeting: Pricing Page Visitors', channel: 'Paid', tier: 'Red', owner: 'Sarah Lee', status: 'Scheduled', date: '2025-08-19', budget: 128 },
   { id: 3, name: 'LinkedIn Thought Leadership', channel: 'Social', tier: 'Orange', owner: 'John Doe', status: 'Live', date: '2025-08-19', budget: 412 },
   { id: 4, name: 'Partner Referral Program', channel: 'Social', tier: 'Orange', owner: 'Michael Wong', status: 'Live', date: '2025-08-20', budget: 86 },
   { id: 5, name: 'LinkedIn Lead Gen Forms', channel: 'Social', tier: 'Orange', owner: 'Priya Patel', status: 'Scheduled', date: '2025-08-22', budget: 0 },
-  { id: 6, name: 'Brand Search — Q3', channel: 'Paid', tier: 'Red', owner: 'Sarah Lee', status: 'Ended', date: '2025-07-28', budget: 488 },
+  { id: 6, name: 'Brand Search: Q3', channel: 'Paid', tier: 'Red', owner: 'Sarah Lee', status: 'Ended', date: '2025-07-28', budget: 488 },
   { id: 7, name: 'Spring Webinar Series', channel: 'Email', tier: 'Yellow', owner: 'Priya Patel', status: 'Ended', date: '2025-04-02', budget: 312 }
 ];
 const COLS = [['name', 'Campaign'], ['channel', 'Channel'], ['tier', 'Priority'], ['owner', 'Owner'], ['status', 'Status'], ['date', 'Launch Date'], ['budget', 'Leads']];
-const NAVKIDS = { campaigns: ['All Campaigns', 'LinkedIn', 'Meta', 'Google'], channels: ['Email', 'Paid Ads'] };
+const NAVKIDS = { campaigns: ['All Campaigns', 'LinkedIn', 'Meta', 'Google', 'TikTok'], channels: ['Email', 'Paid Ads'] };
 const FAQS = [
   ['How often does the dashboard refresh?', 'Overview numbers update on load, on time-range change, and whenever you click the refresh button next to the range picker.'],
   ['Where do leads and MQLs come from?', 'They roll up from your connected ad accounts (Meta, Google, LinkedIn) and HubSpot lifecycle stages.'],
-  ['Can I export the attribution table?', 'Yes — use the "⋯" menu above the table to export selected rows or the full table as CSV.'],
+  ['Can I export the attribution table?', 'Yes. Use the "⋯" menu above the table to export selected rows or the full table as CSV.'],
   ["How do I change a campaign's status or owner?", 'Open the "⋯" menu on any row in the Attribution table or the Campaigns page.'],
-  ['Who do I contact for account issues?', 'Use the Feedback page, or email support directly — we typically reply within one business day.']
+  ['Who do I contact for account issues?', 'Use the Feedback page, or email support directly. We typically reply within one business day.']
 ];
 const NAVKEY = 'mkt-dash.nav.v1';
-const CHANNELS = { LinkedIn: { color: '#0a66c2', mono: 'in' }, Meta: { color: '#0866ff', mono: 'M' }, Google: { color: '#ea4335', mono: 'G' } };
+const CHANNELS = { LinkedIn: { color: '#0a66c2', mono: 'in' }, Meta: { color: '#0866ff', mono: 'M' }, Google: { color: '#ea4335', mono: 'G' }, TikTok: { color: '#010101', mono: 'T' } };
 const CSTAT = { Live: '#2563eb', Paused: '#9ca3af' };
 const CAMPS = [
-  ['LinkedIn', 'ABM — Enterprise Decision Makers', 'Live', '2025-08-04', 18400, 212, 96],
-  ['LinkedIn', 'Lead Gen Form — Q3 Playbook', 'Live', '2025-07-21', 12300, 336, 118],
-  ['LinkedIn', 'Thought Leadership — CMO Series', 'Live', '2025-08-11', 9650, 148, 51],
-  ['LinkedIn', 'Retargeting — Pricing Page Visitors', 'Paused', '2025-06-30', 4200, 64, 29],
-  ['Meta', 'Lookalike 2% — Trial Signups', 'Live', '2025-07-28', 7820, 402, 88, 3.8],
-  ['Meta', 'UGC Video — Summer Sale', 'Live', '2025-08-01', 5340, 368, 61, 4.6],
-  ['Meta', 'Advantage+ — Retargeting', 'Live', '2025-08-06', 4480, 259, 57, 2.9],
-  ['Meta', 'Carousel — Feature Highlights', 'Paused', '2025-07-14', 2960, 141, 22, 2.3],
-  ['Google', 'Performance Max — Demo Requests', 'Live', '2025-07-07', 11760, 521, 162],
+  ['LinkedIn', 'ABM: Enterprise Decision Makers', 'Live', '2025-08-04', 18400, 212, 96],
+  ['LinkedIn', 'Lead Gen Form: Q3 Playbook', 'Live', '2025-07-21', 12300, 336, 118],
+  ['LinkedIn', 'Thought Leadership: CMO Series', 'Live', '2025-08-11', 9650, 148, 51],
+  ['LinkedIn', 'Retargeting: Pricing Page Visitors', 'Paused', '2025-06-30', 4200, 64, 29],
+  ['Meta', 'Lookalike 2%: Trial Signups', 'Live', '2025-07-28', 7820, 402, 88, 3.8],
+  ['Meta', 'UGC Video: Summer Sale', 'Live', '2025-08-01', 5340, 368, 61, 4.6],
+  ['Meta', 'Advantage+: Retargeting', 'Live', '2025-08-06', 4480, 259, 57, 2.9],
+  ['Meta', 'Carousel: Feature Highlights', 'Paused', '2025-07-14', 2960, 141, 22, 2.3],
+  ['Meta', 'Lead Magnet: Case Study Download', 'Live', '2025-08-12', 3840, 214, 48, 3.4],
+  ['Meta', 'Lookalike 1%: Webinar Signups', 'Live', '2025-08-05', 5120, 289, 52, 2.7],
+  ['Meta', 'Testimonial Video: Customer Story', 'Paused', '2025-07-20', 2210, 96, 15, 2.0],
+  ['Google', 'Performance Max: Demo Requests', 'Live', '2025-07-07', 11760, 521, 162],
   ['Google', 'Competitor Keywords', 'Live', '2025-07-15', 8940, 297, 104],
-  ['Google', 'Brand Search — Q3', 'Live', '2025-07-01', 6210, 488, 173],
-  ['Google', 'YouTube — Product Walkthrough', 'Paused', '2025-06-23', 3150, 96, 18]
+  ['Google', 'Brand Search: Q3', 'Live', '2025-07-01', 6210, 488, 173],
+  ['Google', 'YouTube: Product Walkthrough', 'Paused', '2025-06-23', 3150, 96, 18],
+  ['TikTok', 'Spark Ads: Founder Story', 'Live', '2025-08-10', 3620, 118, 16, 1.9],
+  ['TikTok', 'In-Feed: Product Demo', 'Live', '2025-08-02', 2740, 84, 11, 2.2],
+  ['TikTok', 'Branded Effect: Launch Week', 'Paused', '2025-06-30', 1490, 39, 5, 1.3]
 ].map((a, i) => ({ id: i + 1, ch: a[0], name: a[1], status: a[2], date: a[3], spend: a[4], leads: a[5], mqls: a[6], ctr: a[7] }));
 const CCOLS = [['name', 'Campaign'], ['status', 'Status'], ['spend', 'Spend'], ['leads', 'Leads'], ['cpl', 'Cost per lead'], ['mqls', 'MQLs'], ['cpm', 'Cost per MQL']];
 const CTR_COL = ['ctr', 'CTR'];
-const ASTAT = { Active: '#059669', Paused: '#9ca3af' };
+const ASTAT = { Active: '#2563eb', Paused: '#9ca3af' };
 const CHAN_META = {
-  Email: { color: '#eab308', cols: ['Campaign', 'Sent', 'Open rate', 'Click rate', 'Leads'] },
+  Email: { color: '#f97316', cols: ['Campaign', 'Sent', 'Open rate', 'Click rate', 'Leads'] },
   'Paid Ads': { color: '#ef4444', cols: ['Ad set', 'Platform', 'Spend', 'CTR', 'Leads'] }
 };
 const CHAN_ITEMS = {
   Email: [
-    ['Webinar Follow-up — Reminder 2', 'Sent', 12400, 18.6, 3.2, 386],
+    ['Webinar Follow-up', 'Sent', 12400, 18.6, 3.2, 386],
     ['Q3 Newsletter', 'Sent', 18900, 14.1, 2.0, 212],
     ['Back to School Nurture', 'Sent', 9800, 13.2, 2.6, 168],
     ['Demo No-show Re-engage', 'Sent', 2100, 19.4, 4.1, 74],
     ['Spring Webinar Series Recap', 'Sent', 6200, 11.9, 1.8, 91]
   ],
   Social: [
-    ['LinkedIn Thought Leadership — CMO Series', 'LinkedIn', 84200, 4.8, 51],
+    ['LinkedIn Thought Leadership: CMO Series', 'LinkedIn', 84200, 4.8, 51],
     ['Instagram UGC Push', 'Instagram', 61300, 3.1, 42],
     ['Partner Referral Program', 'LinkedIn', 22400, 5.6, 86],
-    ['Facebook Carousel — Feature Highlights', 'Facebook', 38700, 2.4, 22],
+    ['Facebook Carousel: Feature Highlights', 'Facebook', 38700, 2.4, 22],
     ['TikTok Spark Ads', 'TikTok', 51900, 1.9, 18]
   ],
   'Paid Ads': [
-    ['Performance Max — Demo Requests', 'Google', 11760, 3.4, 162],
-    ['Lookalike 2% — Trial Signups', 'Meta', 7820, 3.8, 88],
-    ['Brand Search — Q3', 'Google', 6210, 6.1, 173],
-    ['ABM — Enterprise Decision Makers', 'LinkedIn', 18400, 0.9, 96],
-    ['Retargeting — Pricing Page Visitors', 'Meta', 4200, 2.6, 29]
+    ['Performance Max: Demo Requests', 'Google', 11760, 3.4, 162],
+    ['Lookalike 2%: Trial Signups', 'Meta', 7820, 3.8, 88],
+    ['Brand Search: Q3', 'Google', 6210, 6.1, 173],
+    ['ABM: Enterprise Decision Makers', 'LinkedIn', 18400, 0.9, 96],
+    ['Retargeting: Pricing Page Visitors', 'Meta', 4200, 2.6, 29]
   ]
 };
 const AUTOS = [
-  ['Lead Rotation — Round Robin', 'Contact enters Sales pipeline stage', 'Active', 3240, 142, 3098, '2h ago'],
+  ['Lead Rotation: Round Robin', 'Contact enters Sales pipeline stage', 'Active', 3240, 142, 3098, '2h ago'],
   ['MQL Notification to Sales', 'Lead score crosses 70', 'Active', 1860, 0, 1860, '18m ago'],
   ['Webinar Follow-up Nurture', 'Submits webinar registration form', 'Active', 2410, 386, 2024, '1h ago'],
   ['Lifecycle Stage: Lead to MQL', 'Lead scoring property changes', 'Active', 5120, 210, 4910, '32m ago'],
   ['Abandoned Demo Request Re-engage', 'Form started, not submitted in 24h', 'Active', 940, 88, 852, '4h ago'],
-  ['Internal Slack Alert — Enterprise Lead', 'Company employee count > 1000', 'Paused', 312, 0, 312, '3d ago'],
-  ['Re-engagement — Cold Leads (90d)', 'No email engagement in 90 days', 'Active', 1580, 264, 1316, '6h ago'],
+  ['Internal Slack Alert: Enterprise Lead', 'Company employee count > 1000', 'Paused', 312, 0, 312, '3d ago'],
+  ['Re-engagement: Cold Leads (90d)', 'No email engagement in 90 days', 'Active', 1580, 264, 1316, '6h ago'],
   ['Customer Onboarding Sequence', 'Deal stage changes to Closed Won', 'Active', 684, 47, 637, '22m ago']
 ].map((a, i) => ({ id: i + 1, name: a[0], desc: a[1], status: a[2], enrolled: a[3], active: a[4], completedN: a[5], lastRun: a[6] }));
 const GRID_BASE = 'minmax(260px,2.6fr) 1fr 1fr 0.8fr 1fr 0.8fr 1fr';
@@ -1348,7 +1357,7 @@ class Component extends DCLogic {
   goInsights() { this.setState({ view: 'insights', drawer: false, open: null }); }
   goFunnel() { this.setState({ view: 'funnel', drawer: false, open: null }); }
   funnelVals() {
-    const stages = [['Leads', 5420, '#93c5fd'], ['MQLs', 1247, '#60a5fa'], ['SQLs', 486, '#3b82f6'], ['Opportunities', 214, '#1f2937'], ['Closed-won', 58, '#059669']];
+    const stages = [['Leads', 5420, '#93c5fd'], ['MQLs', 1247, '#60a5fa'], ['SQLs', 486, '#3b82f6'], ['Opportunities', 214, '#1f2937'], ['Closed-won', 58, '#2563eb']];
     const top = stages[0][1];
     const rows = stages.map((s, i) => {
       const next = stages[i + 1];
@@ -1392,7 +1401,7 @@ class Component extends DCLogic {
       line, area: line + ' L100 100 L0 100 Z', x: xs,
       grid: [1, 0.75, 0.5, 0.25, 0].map(fr => ({ top: (1 - fr) * 100 + '%', label: '$' + Math.round(yMax * fr) })),
       band: { top: (1 - band[1] / yMax) * 100 + '%', h: ((band[1] - band[0]) / yMax) * 100 + '%' },
-      dots: pts.map((p, i) => ({ left: p[0] + '%', top: p[1] + '%', size: i === h ? '10px' : '6px', bg: i === h ? '#1f2937' : '#fff', bgG: i === h ? '#059669' : '#fff', onEnter: () => this.setState({ csHov: { k: key, i } }) })),
+      dots: pts.map((p, i) => ({ left: p[0] + '%', top: p[1] + '%', size: i === h ? '10px' : '6px', bg: i === h ? '#1f2937' : '#fff', bgG: i === h ? '#2563eb' : '#fff', onEnter: () => this.setState({ csHov: { k: key, i } }) })),
       tip: { left: px + '%', top: pts[h][1] + '%', text: tipFmt(vals[h], h), tf: px > 85 ? 'translate(calc(-100% + 6px), calc(-100% - 12px))' : px < 12 ? 'translate(-6px, calc(-100% - 12px))' : 'translate(-50%, calc(-100% - 12px))' }
     };
   }
@@ -1407,21 +1416,21 @@ class Component extends DCLogic {
     });
     const stat = (a, i) => ({ value: a[0], label: a[1], sub: a[2], color: a[3] || '#1f2937', delay: 80 + i * 60 + 'ms' });
     const steps = arr => arr.map((a, i) => ({ n: String(i + 1).padStart(2, '0'), title: a[0], desc: a[1], notLast: i < arr.length - 1 }));
-    const cpqlVals = [248, 236, 241, 222, 214, 229, 205, 196, 211, 188, 176, 193, 182, 168, 179, 171, 186, 174];
-    const cplVals = [292, 284, 270, 248, 226, 204, 182, 165, 148, 134, 121, 112, 104, 98, 96];
+    const cpqlVals = [318, 294, 301, 247, 231, 266, 222, 209, 214, 191, 186, 204, 181, 173, 177, 166, 171, 168];
+    const cplVals = [298, 312, 276, 291, 254, 262, 228, 241, 196, 209, 168, 152, 131, 118, 104];
     const qLabels = ["Q3 ’22", "Q4 ’22", "Q1 ’23", "Q2 ’23", "Q3 ’23", "Q4 ’23", "Q1 ’24", "Q2 ’24", "Q3 ’24", "Q4 ’24", "Q1 ’25", "Q2 ’25", "Q3 ’25", "Q4 ’25", "Q1 ’26"];
     const mqlIdx = [100, 108, 117, 126, 134, 141, 147, 153];
     const mqlL = ["H2 ’22", "H1 ’23", "H2 ’23", "H1 ’24", "H2 ’24", "H1 ’25", "H2 ’25", "H1 ’26"];
     const volIdx = [100, 112, 132, 145, 180, 207, 271, 309];
     const light = { bg: 'linear-gradient(180deg,#efefef,#e6e6e6)', bd: '#d8d8d8', lc: '#6b7280' };
     const dark = { bg: 'linear-gradient(180deg,#37475d,#1f2937)', bd: '#1f2937', lc: '#1f2937' };
-    const green = { bg: 'linear-gradient(180deg,#10b981,#059669)', bd: '#059669', lc: '#059669' };
+    const green = { bg: 'linear-gradient(180deg,#3b82f6,#2563eb)', bd: '#2563eb', lc: '#2563eb' };
     const ads = [['Case study: Supergoop', 39, 'Scale'], ['Case study: Nasdaq med-tech co.', 34, 'Scale'], ['Case study: Subsea cable co.', 31, 'Keep'], ['Case study: LCubed', 24, 'Keep'], ['Case study: Appen', 20, 'Keep']];
-    const tagC = { Scale: ['#ecfdf5', '#047857'], Keep: ['#f3f4f6', '#4b5563'], Cut: ['#fef2f2', '#b91c1c'] };
+    const tagC = { Scale: ['#eff6ff', '#1d4ed8'], Keep: ['#f3f4f6', '#4b5563'], Cut: ['#fef2f2', '#b91c1c'] };
     return {
       cs: {
         roles,
-        summary: [['4 yrs', 'In B2B digital marketing'], ['3', 'Platforms owned end to end — Meta, Google, LinkedIn'], ['~$300k', 'Ad spend managed'], ['6,700+', 'Leads generated across roles']].map((k, i) => ({ value: k[0], label: k[1], delay: i * 60 + 'ms' })),
+        summary: [['4 yrs', 'In B2B digital marketing'], ['3', 'Platforms owned end to end: Meta, Google, LinkedIn'], ['~$300k', 'Ad spend managed'], ['6,700+', 'Leads generated across roles']].map((k, i) => ({ value: k[0], label: k[1], delay: i * 60 + 'ms' })),
         skills: [
           ['Paid media', ['Meta Ads', 'Google Ads', 'LinkedIn Ads', 'A/B testing', 'Landing pages']],
           ['Marketing ops', ['HubSpot', 'Lifecycle automation', 'Lead scoring', 'Webhooks']],
@@ -1431,13 +1440,13 @@ class Component extends DCLogic {
         leave: () => this.setState({ csHov: null }),
         dec: {
           chips: ['Meta Ads', 'Google Ads', 'LinkedIn Ads', 'HubSpot', 'Claude Code', 'Vercel'],
-          stats: [['$150–250', 'Cost per qualified lead', 'Senior decision-makers at businesses with 200+ staff', '#059669'], ['0 → 1', 'Meta channel launched', 'Channel, HubSpot and reporting set up from scratch'], ['5', 'Sugarwork case studies', 'Supergoop, a Nasdaq med-tech co., a subsea cable co., LCubed, Appen'], ['1st', 'High-intent leads', 'Came from the AI Roadmap landing page']].map(stat),
-          cpql: this.csLine('dec', cpqlVals, 300, [150, 250], ['May', 'Jun', 'Jul', 'Aug', 'Sep'], (v, i) => 'Week ' + (i + 1) + ' · $' + v),
+          stats: [['$150–200', 'Cost per qualified lead', 'Senior decision-makers at businesses with 200+ staff', '#2563eb'], ['0 → 1', 'Meta channel launched', 'Channel, HubSpot and reporting set up from scratch'], ['5', 'Sugarwork case studies', 'Supergoop, a Nasdaq med-tech co., a subsea cable co., LCubed, Appen'], ['1st', 'High-intent leads', 'Came from the AI Roadmap landing page']].map(stat),
+          cpql: this.csLine('dec', cpqlVals, 360, [150, 200], ['May', 'Jun', 'Jul', 'Aug', 'Sep'], (v, i) => 'Week ' + (i + 1) + ' · $' + v),
           mix: [['May', 18], ['Jun', 31], ['Jul', 44], ['Aug', 57], ['Sep', 66]].map((m, i) => ({ month: m[0], q: m[1] + '%', low: 100 - m[1] + '%', label: m[1] + '%', delay: 150 + i * 60 + 'ms' })),
-          ads: ads.map((a, i) => ({ name: a[0], rate: a[1] + '%', w: (a[1] / 45) * 100 + '%', color: a[2] === 'Scale' ? '#059669' : a[2] === 'Cut' ? '#ef4444' : '#1f2937', tag: a[2], tagBg: tagC[a[2]][0], tagFg: tagC[a[2]][1], delay: 120 + i * 60 + 'ms' })),
+          ads: ads.map((a, i) => ({ name: a[0], rate: a[1] + '%', w: (a[1] / 45) * 100 + '%', color: a[2] === 'Scale' ? '#2563eb' : a[2] === 'Cut' ? '#ef4444' : '#9ca3af', tag: a[2], tagBg: tagC[a[2]][0], tagFg: tagC[a[2]][1], delay: 120 + i * 60 + 'ms' })),
           built: steps([
             ['AI Roadmap campaign', 'Built a custom landing page and A/B tested the copy and structure. It brought in the company’s first high-intent leads.'],
-            ['Case study relaunch', 'Coordinated the redesign of 5 legacy Sugarwork case studies — Supergoop, a Nasdaq-listed med-tech company, a subsea cable company, LCubed and Appen — briefing the creative and running a separate campaign for each across AU and US.'],
+            ['Case study relaunch', 'Coordinated the redesign of 5 legacy Sugarwork case studies: Supergoop, a Nasdaq-listed med-tech company, a subsea cable company, LCubed and Appen: briefing the creative and running a separate campaign for each across AU and US.'],
             ['HubSpot nurture', 'Built workflows and sequences, including welcome journeys, which improved deliverability, open rates and click-through rates.'],
             ['Webhook automations', 'Wrote HubSpot webhooks in Claude Code so the lifecycle runs in the background, saving hours of manual work every week.'],
             ['12 HubSpot automations', 'Built 12 workflows behind the lifecycle, including lead routing to MQL, automatic seniority field filling, country code filling, deal creation on MQL, lifecycle stage sync, and duplicate contact merging.']
@@ -1445,10 +1454,10 @@ class Component extends DCLogic {
         },
         air: {
           chips: ['Meta Ads', 'Google Ads', 'LinkedIn Ads', 'HubSpot', 'Landing pages', 'A/B testing'],
-          stats: [['$275 → $100', 'Cost per lead', 'From $250–300 down to $80–120', '#059669'], ['+50%', 'Lead → MQL rate', 'Optimised for quality over volume', '#059669'], ['10–50%', 'Monthly lead growth', 'Consistently ahead of target'], ['3', 'Channels owned', 'Meta, Google and LinkedIn, end to end']].map(stat),
+          stats: [['$275 → $100', 'Cost per lead', 'From $250–300 down to $80–120', '#2563eb'], ['+50%', 'Lead → MQL rate', 'Optimised for quality over volume', '#2563eb'], ['10–50%', 'Monthly lead growth', 'Consistently ahead of target'], ['3', 'Channels owned', 'Meta, Google and LinkedIn, end to end']].map(stat),
           cpl: this.csLine('air', cplVals, 320, [80, 120], ["Q3 ’22", "Q1 ’23", "Q3 ’23", "Q1 ’24", "Q3 ’24", "Q1 ’25", "Q3 ’25", "Q1 ’26"], (v, i) => qLabels[i] + ' · $' + v),
           mql: mqlIdx.map((v, i) => ({ ...(i === mqlIdx.length - 1 ? green : light), h: (v / 160) * 82 + '%', top: v, label: mqlL[i], half: mqlL[i].split(' ')[0], yr: mqlL[i].split(' ')[1], delay: 120 + i * 50 + 'ms' })),
-          vol: volIdx.map((v, i) => ({ ...(i === volIdx.length - 1 ? dark : light), h: (v / 320) * 82 + '%', top: i === 0 ? '—' : '+' + Math.round((v / volIdx[i - 1] - 1) * 100) + '%', lc: i === 0 ? '#9ca3af' : '#059669', label: 'M' + (i + 1), delay: 120 + i * 50 + 'ms' })),
+          vol: volIdx.map((v, i) => ({ ...(i === volIdx.length - 1 ? green : light), h: (v / 320) * 82 + '%', top: i === 0 ? '-' : '+' + Math.round((v / volIdx[i - 1] - 1) * 100) + '%', lc: i === 0 ? '#9ca3af' : '#2563eb', label: 'M' + (i + 1), delay: 120 + i * 50 + 'ms' })),
           steps: steps([
             ['Test', 'Ran structured A/B tests on creative, targeting and copy.'],
             ['Qualify', 'Optimised targeting and creative for lead quality rather than volume.'],
@@ -1530,9 +1539,9 @@ class Component extends DCLogic {
     const kpis = [
       ['Spend', money(T.spend * e), list.length + ' campaigns'],
       ['Leads', Math.round(T.leads * e).toLocaleString('en-US'), T.leads ? (T.mqls / T.leads * 100).toFixed(1) + '% become MQLs' : 'No leads yet'],
-      ['Cost per lead', T.cpl == null ? '—' : money2(T.cpl * e), 'Blended across channels'],
+      ['Cost per lead', T.cpl == null ? '-' : money2(T.cpl * e), 'Blended across channels'],
       ['MQLs', Math.round(T.mqls * e).toLocaleString('en-US'), 'Marketing qualified'],
-      ['Cost per MQL', T.cpm == null ? '—' : money2(T.cpm * e), 'Blended across channels']
+      ['Cost per MQL', T.cpm == null ? '-' : money2(T.cpm * e), 'Blended across channels']
     ].map((k, i) => ({ title: k[0], display: k[1], sub: k[2], delay: i * 60 + 'ms' }));
     const cs = s.csort;
     const val = (c, k) => k === 'cpl' ? (ratio(c.spend, c.leads) ?? Infinity) : k === 'cpm' ? (ratio(c.spend, c.mqls) ?? Infinity) : c[k];
@@ -1554,7 +1563,7 @@ class Component extends DCLogic {
         name: ch, color: CHANNELS[ch].color, mono: CHANNELS[ch].mono, delay: 120 + gi * 80 + 'ms', cols: gcols, hasCtr,
         gridCols: GRID_BASE + (hasCtr ? ' 0.8fr' : '') + ' 48px',
         countLabel: rows.length + (rows.length === 1 ? ' campaign' : ' campaigns'), tableLabel: ch + ' campaigns',
-        tot: { spend: money(gt.spend), leads: gt.leads.toLocaleString('en-US'), mqls: gt.mqls.toLocaleString('en-US'), cpl: gt.cpl == null ? '—' : money2(gt.cpl), cpm: gt.cpm == null ? '—' : money2(gt.cpm), ctr: hasCtr ? avgCtr.toFixed(1) + '%' : '' },
+        tot: { spend: money(gt.spend), leads: gt.leads.toLocaleString('en-US'), mqls: gt.mqls.toLocaleString('en-US'), cpl: gt.cpl == null ? '-' : money2(gt.cpl), cpm: gt.cpm == null ? '-' : money2(gt.cpm), ctr: hasCtr ? avgCtr.toFixed(1) + '%' : '' },
         rows: rows.map((c, i) => {
           const cpl = ratio(c.spend, c.leads), cpm = ratio(c.spend, c.mqls), k = 'crow:' + c.id;
           return {
@@ -1562,7 +1571,7 @@ class Component extends DCLogic {
             meta: 'Launched ' + c.date,
             status: c.status, stColor: CSTAT[c.status], delay: i * 60 + 'ms',
             spendL: money(c.spend), leadsL: c.leads.toLocaleString('en-US'), mqlsL: c.mqls.toLocaleString('en-US'),
-            cplL: cpl == null ? '—' : money2(cpl), cpmL: cpm == null ? '—' : money2(cpm), ctrL: hasCtr ? c.ctr.toFixed(1) + '%' : '',
+            cplL: cpl == null ? '-' : money2(cpl), cpmL: cpm == null ? '-' : money2(cpm), ctrL: hasCtr ? c.ctr.toFixed(1) + '%' : '',
             menuLabel: 'Actions for ' + c.name, menuOpen: s.open === k,
             onMenu: ev => {
               const rc = ev.currentTarget.getBoundingClientRect();
@@ -1573,7 +1582,7 @@ class Component extends DCLogic {
         })
       };
     }).filter(Boolean);
-    const tabs = ['All', 'LinkedIn', 'Meta', 'Google'].map(f => {
+    const tabs = ['All', 'LinkedIn', 'Meta', 'Google', 'TikTok'].map(f => {
       const on = f === s.cf;
       return { label: f === 'All' ? 'All campaigns' : f, on, mono: CHANNELS[f] ? CHANNELS[f].mono : false, dot: CHANNELS[f] ? CHANNELS[f].color : 'transparent',
         count: s.camps.filter(c => inF(c, f)).length, bg: on ? '#1f2937' : '#fff', color: on ? '#fff' : '#1f2937', bd: on ? '#1f2937' : '#e5e7eb',
@@ -1589,7 +1598,7 @@ class Component extends DCLogic {
         { label: 'Delete', color: '#ef4444', onClick: () => this.campAction(c.id, 'del') }
       ] };
     }
-    const sub = { All: 'Spend, leads and MQLs across LinkedIn, Meta and Google.', LinkedIn: 'LinkedIn campaigns — spend, leads and MQL efficiency.', Meta: 'Meta campaigns — spend, leads and MQL efficiency.', Google: 'Google campaigns — spend, leads and MQL efficiency.' }[s.cf];
+    const sub = { All: 'Spend, leads and MQLs across LinkedIn, Meta and Google.', LinkedIn: 'LinkedIn campaigns: spend, leads and MQL efficiency.', Meta: 'Meta campaigns: spend, leads and MQL efficiency.', Google: 'Google campaigns: spend, leads and MQL efficiency.' }[s.cf];
     return {
       cmp: { subtitle: sub, q: s.cmpQ, onQ: ev => this.setState({ cmpQ: ev.target.value }), clearQ: () => this.setState({ cmpQ: '' }),
         tabs, kpis, groups, hasGroups: groups.length > 0, empty: groups.length === 0, reset: () => this.setState({ cmpQ: '', cf: 'All' }) },
@@ -1621,7 +1630,7 @@ class Component extends DCLogic {
       return {
         title: KMETA[i].title, isReach: i === 0, isEng: i === 1, isConv: i === 2,
         display: (a[5] || '') + fmt(a[0] * ke, a[1]) + a[2], delta: (up ? '+' : '') + a[3] + '%',
-        dColor: good ? '#059669' : '#ef4444', per: PER[s.range], line: sp.line, area: sp.area,
+        dColor: good ? '#2563eb' : '#ef4444', per: PER[s.range], line: sp.line, area: sp.area,
         gid: 'kg' + i, fill: 'url(#kg' + i + ')', delay: i * 70 + 'ms', sdelay: 200 + i * 90 + 'ms'
       };
     });
@@ -1802,7 +1811,7 @@ class Component extends DCLogic {
         return {
           leadLabel: actual.toLocaleString('en-US') + ' of ' + target.toLocaleString('en-US') + ' leads',
           status: (ahead ? '+' : '') + Math.round((actual / expected - 1) * 100) + '% vs. expected pace',
-          color: ahead ? '#059669' : '#ef4444', barColor: ahead ? '#1f2937' : '#ef4444',
+          color: ahead ? '#2563eb' : '#ef4444', barColor: ahead ? '#1f2937' : '#ef4444',
           w: w + '%', expectedLeft: Math.min(100, frac * 100) + '%', targetLabel: target.toLocaleString('en-US')
         };
       })(),
