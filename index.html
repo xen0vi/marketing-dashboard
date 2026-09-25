@@ -107,13 +107,6 @@ input::placeholder{color:#6b7280}
         </button>
       </div>
 
-      <div style="font-size:12px; color:#6b7280; letter-spacing:.02em; margin:22px 2px 8px;">WORKSPACE</div>
-      <div style="display:flex; flex-direction:column; gap:2px; padding-bottom:8px;">
-        <button onClick="{{ goFeedback }}" aria-current="{{ feedbackCurrent }}" style="display:flex; align-items:center; gap:10px; width:100%; height:32px; padding:0 10px; border-radius:8px; border:0.8px solid {{ feedbackNav.bd }}; background:{{ feedbackNav.bg }}; box-shadow:{{ feedbackNav.shadow }}; cursor:pointer; text-align:left; color:#1f2937;" style-hover="background:{{ feedbackNav.hover }}">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round"><path d="M20.5 14.5a2 2 0 0 1-2 2H8l-4.5 4V5a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2z"></path></svg>
-          <span style="font-size:14px;">Feedback</span>
-        </button>
-      </div>
     </nav>
 
     <button aria-label="Account menu" style="margin-top:10px; display:flex; align-items:center; gap:10px; width:100%; padding:9px 10px; border-radius:12px; border:0.8px solid #e5e7eb; background:#fff; box-shadow:0 1px 2px rgba(0,0,0,0.04); cursor:pointer; text-align:left; transition:box-shadow .25s, transform .15s;" style-hover="box-shadow:0 6px 16px rgba(0,0,0,0.08)" style-active="transform:scale(0.99)">
@@ -149,6 +142,10 @@ input::placeholder{color:#6b7280}
       </nav>
     </div>
     <div style="display:flex; align-items:center; gap:4px;">
+      <button onClick="{{ toggleDark }}" aria-label="{{ darkLabel }}" aria-pressed="{{ dark }}" style="width:30px; height:30px; display:flex; align-items:center; justify-content:center; border:0; background:transparent; border-radius:6px; cursor:pointer; color:#4b5563;" style-hover="background:#efefef; color:#1f2937">
+        <sc-if value="{{ dark }}" hint-placeholder-val="{{ false }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg></sc-if>
+        <sc-if value="{{ light }}" hint-placeholder-val="{{ true }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a6.5 6.5 0 0 0 11 11z"></path></svg></sc-if>
+      </button>
       <button aria-label="Notifications" style="width:30px; height:30px; display:flex; align-items:center; justify-content:center; border:0; background:transparent; border-radius:6px; cursor:pointer; color:#4b5563;" style-hover="animation:wiggle .6s ease; color:#1f2937">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg>
       </button>
@@ -1083,27 +1080,7 @@ input::placeholder{color:#6b7280}
     </div>
     </sc-if>
 
-    <sc-if value="{{ isFeedback }}" hint-placeholder-val="{{ false }}">
-    <div style="display:flex; flex-direction:column; gap:16px; max-width:640px;">
-      <div><h1 style="margin:0; font-size:24px; font-weight:500; letter-spacing:-0.02em;">Feedback</h1><p style="margin:14px 0 0; font-size:13px; color:#4b5563;">Tell us what's working and what isn't.</p></div>
-      <div style="background-color:#f6f6f6; background-image:repeating-linear-gradient(135deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 7px); border:0.8px solid #ececec; border-radius:12px; padding:4px;">
-        <div style="background:#fff; border:0.8px solid #e5e7eb; border-radius:9px; padding:20px; display:flex; flex-direction:column; gap:14px;">
-          <sc-if value="{{ fbSent }}" hint-placeholder-val="{{ false }}">
-            <div style="display:flex; flex-direction:column; align-items:center; text-align:center; padding:28px 12px; animation:fade .3s both;">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"></path></svg>
-              <div style="margin-top:12px; font-size:14px; font-weight:500;">Thanks, feedback sent</div>
-            </div>
-          </sc-if>
-          <sc-if value="{{ fbNotSent }}" hint-placeholder-val="{{ true }}">
-            <label style="display:flex; flex-direction:column; gap:6px;"><span style="font-size:13px; color:#4b5563;">What's on your mind?</span>
-              <textarea value="{{ fbText }}" onChange="{{ onFbText }}" rows="5" placeholder="Share an idea, bug or general thought..." style="resize:vertical; border:0.8px solid #e5e7eb; border-radius:8px; padding:10px; font-size:13.5px; outline:none; font-family:inherit;"></textarea>
-            </label>
-            <button onClick="{{ sendFb }}" disabled="{{ fbDisabled }}" style="align-self:flex-start; height:34px; padding:0 16px; border:0; background:#1f2937; color:#fff; border-radius:7px; font-size:13px; font-weight:500; cursor:pointer; opacity:{{ fbOpacity }};" style-hover="background:#111827">Send feedback</button>
-          </sc-if>
-        </div>
-      </div>
-    </div>
-    </sc-if>
+    
 
     
             </div>
@@ -1345,7 +1322,16 @@ class Component extends DCLogic {
     return { campaigns: true, channels: false };
   }
 
+  applyDark(on) {
+    const el = document.documentElement;
+    el.style.filter = on ? 'invert(1) hue-rotate(180deg)' : '';
+    el.style.background = on ? '#f8f8f8' : '';
+    try { localStorage.setItem('mkt-dash.dark', on ? '1' : '0'); } catch (e) {}
+  }
   componentDidMount() {
+    let d = false;
+    try { d = localStorage.getItem('mkt-dash.dark') === '1'; } catch (e) {}
+    if (d) { this.setState({ dark: true }); this.applyDark(true); }
     this._rs = () => this.setState({ vw: window.innerWidth });
     this._md = e => {
       const o = this.state.open; if (!o) return;
@@ -1502,7 +1488,7 @@ class Component extends DCLogic {
     });
     const stat = (a, i) => ({ value: a[0], label: a[1], sub: a[2], color: a[3] || '#1f2937', delay: 80 + i * 60 + 'ms' });
     const steps = arr => arr.map((a, i) => ({ n: String(i + 1).padStart(2, '0'), title: a[0], desc: a[1], notLast: i < arr.length - 1 }));
-    const cpqlVals = [318, 294, 301, 247, 231, 266, 222, 209, 214, 191, 186, 204, 181, 173, 177, 166, 171, 168];
+    const cpqlVals = [342, 268, 311, 229, 187, 284, 236, 172, 219, 161, 198, 243, 176, 149, 207, 158, 189, 164];
     const cplVals = [298, 312, 276, 291, 254, 262, 228, 241, 196, 209, 168, 152, 131, 118, 104];
     const qLabels = ["Q3 ’22", "Q4 ’22", "Q1 ’23", "Q2 ’23", "Q3 ’23", "Q4 ’23", "Q1 ’24", "Q2 ’24", "Q3 ’24", "Q4 ’24", "Q1 ’25", "Q2 ’25", "Q3 ’25", "Q4 ’25", "Q1 ’26"];
     const mqlIdx = [100, 108, 117, 126, 134, 141, 147, 153];
@@ -1539,8 +1525,8 @@ class Component extends DCLogic {
           ])
         },
         air: {
-          chips: ['Meta Ads', 'Google Ads', 'LinkedIn Ads', 'HubSpot', 'Landing pages', 'A/B testing'],
-          stats: [['$275 → $100', 'Cost per lead', 'From $250–300 down to $80–120', '#2563eb'], ['+50%', 'Lead → MQL rate', 'Optimised for quality over volume', '#2563eb'], ['10–50%', 'Monthly lead growth', 'Consistently ahead of target'], ['3', 'Channels owned', 'Meta, Google and LinkedIn, end to end']].map(stat),
+          chips: ['Meta Ads', 'Google Ads', 'LinkedIn Ads', 'TikTok Ads', 'HubSpot', 'Landing pages', 'A/B testing'],
+          stats: [['$275 → $100', 'Cost per lead', 'From $250–300 down to $80–120', '#2563eb'], ['+50%', 'Lead → MQL rate', 'Optimised for quality over volume', '#2563eb'], ['10–50%', 'Monthly lead growth', 'Consistently ahead of target'], ['4', 'Channels owned', 'Meta, Google, LinkedIn and TikTok, end to end'], ['Always on', 'A/B testing', 'Every campaign ran a live test on creative, copy or landing page']].map(stat),
           cpl: this.csLine('air', cplVals, 320, [80, 120], ["Q3 ’22", "Q1 ’23", "Q3 ’23", "Q1 ’24", "Q3 ’24", "Q1 ’25", "Q3 ’25", "Q1 ’26"], (v, i) => qLabels[i] + ' · $' + v),
           mql: mqlIdx.map((v, i) => ({ ...(i === mqlIdx.length - 1 ? green : light), h: (v / 160) * 82 + '%', top: v, label: mqlL[i], half: mqlL[i].split(' ')[0], yr: mqlL[i].split(' ')[1], delay: 120 + i * 50 + 'ms' })),
           vol: volIdx.map((v, i) => ({ ...(i === volIdx.length - 1 ? green : light), h: (v / 320) * 82 + '%', top: i === 0 ? '-' : '+' + Math.round((v / volIdx[i - 1] - 1) * 100) + '%', lc: i === 0 ? '#9ca3af' : '#2563eb', label: 'M' + (i + 1), delay: 120 + i * 50 + 'ms' })),
@@ -1829,8 +1815,8 @@ class Component extends DCLogic {
       goCases: () => this.goCases(),
       ...this.campVals(), ...this.caseVals(), auto: autoData, chan: this.channelVals(),
       isOverview: isOv, isCampaigns: s.view === 'campaigns', isAutomations: s.view === 'automations', isChannels: s.view === 'channels', isCases: s.view === 'cases',
-      isFeedback: s.view === 'feedback', isInsights: s.view === 'insights', isFunnel: s.view === 'funnel',
-      crumb: isOv ? 'Dashboard Showcase' : { campaigns: 'Campaigns', channels: 'Channels', automations: 'Automations', cases: 'Case Studies', feedback: 'Feedback', insights: 'Audience Insights', funnel: 'Funnel Performance' }[s.view],
+      isInsights: s.view === 'insights', isFunnel: s.view === 'funnel',
+      crumb: isOv ? 'Dashboard Showcase' : { campaigns: 'Campaigns', channels: 'Channels', automations: 'Automations', cases: 'Case Studies', insights: 'Audience Insights', funnel: 'Funnel Performance' }[s.view],
       goCampaignsAll: () => this.goCampaigns('All'),
       campNav: s.view === 'campaigns' ? { current: 'page', bg: '#fff', bd: '#e5e7eb', shadow: '0 1px 2px rgba(0,0,0,0.05)', hover: '#fff' } : { current: undefined, bg: 'transparent', bd: 'transparent', shadow: 'none', hover: '#efefef' },
       goChannelsAll: () => this.goChannels(s.chCf || 'Email'),
@@ -1839,6 +1825,8 @@ class Component extends DCLogic {
         label: s.tfRange, cmpOpen: s.open === 'cmp', chanOpen: s.open === 'chan', cmpToggle: this.tg('cmp'), chanToggle: this.tg('chan'),
         opts: RANGES.map(r => ({ label: r, on: r === s.tfRange, onClick: () => { this.setState({ tfRange: r, open: null }); this.anim('caT'); } }))
       },
+      dark: !!s.dark, light: !s.dark, darkLabel: s.dark ? 'Switch to light mode' : 'Switch to dark mode',
+      toggleDark: () => { const on = !s.dark; this.setState({ dark: on }); this.applyDark(on); },
       goInsights: () => this.goInsights(), insightsCurrent: s.view === 'insights' ? 'page' : undefined,
       insightsNav: s.view === 'insights' ? { bg: '#fff', bd: '#e5e7eb', shadow: '0 1px 2px rgba(0,0,0,0.05)', hover: '#fff' } : { bg: 'transparent', bd: 'transparent', shadow: 'none', hover: '#efefef' },
       goFunnel: () => this.goFunnel(), funnelCurrent: s.view === 'funnel' ? 'page' : undefined,
