@@ -74,54 +74,28 @@ input::placeholder{color:#6b7280}
           <span style="font-size:14px;">Overview</span>
         </button>
 
-        <button onClick="{{ nav.campaigns.toggle }}" aria-expanded="{{ nav.campaigns.open }}" style="display:flex; align-items:center; gap:10px; width:100%; height:32px; padding:0 10px; border-radius:8px; border:0.8px solid transparent; background:transparent; cursor:pointer; text-align:left; color:#1f2937;" style-hover="background:#efefef">
+        <button onClick="{{ goCampaignsAll }}" aria-current="{{ campNav.current }}" style="display:flex; align-items:center; gap:10px; width:100%; height:32px; padding:0 10px; border-radius:8px; border:0.8px solid {{ campNav.bd }}; background:{{ campNav.bg }}; box-shadow:{{ campNav.shadow }}; cursor:pointer; text-align:left; color:#1f2937;" style-hover="background:{{ campNav.hover }}">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path d="m3 11 16-5.5v13L3 13.5z"></path><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"></path></svg>
-          <span style="flex:1; font-size:14px;">Campaigns</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" style="transform:{{ nav.campaigns.chev }}; transition:transform .3s cubic-bezier(.16,1,.3,1);"><path d="m6 9 6 6 6-6"></path></svg>
+          <span style="font-size:14px;">Campaigns</span>
         </button>
-        <sc-if value="{{ nav.campaigns.open }}" hint-placeholder-val="{{ true }}">
-          <div style="display:flex; flex-direction:column; padding-left:10px; animation:fade .3s both;">
-            <sc-for list="{{ nav.campaigns.kids }}" as="k" hint-placeholder-count="3">
-              <a href="#" onClick="{{ k.onClick }}" aria-current="{{ k.current }}" style="display:flex; align-items:center; height:30px; color:{{ k.color }}; font-weight:{{ k.fw }}; font-size:13px;" style-hover="color:#1f2937">
-                <svg width="22" height="30" viewBox="0 0 22 30" fill="none" stroke="#d4d4d8" stroke-width="1"><path d="{{ k.d }}"></path></svg>
-                <span style="padding-left:6px;">{{ k.label }}</span>
-              </a>
-            </sc-for>
-          </div>
-        </sc-if>
 
-        <button onClick="{{ nav.channels.toggle }}" aria-expanded="{{ nav.channels.open }}" style="display:flex; align-items:center; gap:10px; width:100%; height:32px; padding:0 10px; border-radius:8px; border:0.8px solid transparent; background:transparent; cursor:pointer; text-align:left; color:#1f2937;" style-hover="background:#efefef">
+        <button onClick="{{ goChannelsAll }}" aria-current="{{ chanNav.current }}" style="display:flex; align-items:center; gap:10px; width:100%; height:32px; padding:0 10px; border-radius:8px; border:0.8px solid {{ chanNav.bd }}; background:{{ chanNav.bg }}; box-shadow:{{ chanNav.shadow }}; cursor:pointer; text-align:left; color:#1f2937;" style-hover="background:{{ chanNav.hover }}">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round"><path d="m12 3 9 4.5-9 4.5-9-4.5z"></path><path d="m3 12 9 4.5 9-4.5M3 16.5 12 21l9-4.5"></path></svg>
-          <span style="flex:1; font-size:14px;">Channels</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" style="transform:{{ nav.channels.chev }}; transition:transform .3s cubic-bezier(.16,1,.3,1);"><path d="m6 9 6 6 6-6"></path></svg>
+          <span style="font-size:14px;">Channels</span>
         </button>
-        <sc-if value="{{ nav.channels.open }}" hint-placeholder-val="{{ false }}">
-          <div style="display:flex; flex-direction:column; padding-left:10px; animation:fade .3s both;">
-            <sc-for list="{{ nav.channels.kids }}" as="k" hint-placeholder-count="3">
-              <a href="#" onClick="{{ k.onClick }}" aria-current="{{ k.current }}" style="display:flex; align-items:center; height:30px; color:{{ k.color }}; font-weight:{{ k.fw }}; font-size:13px;" style-hover="color:#1f2937">
-                <svg width="22" height="30" viewBox="0 0 22 30" fill="none" stroke="#d4d4d8" stroke-width="1"><path d="{{ k.d }}"></path></svg>
-                <span style="padding-left:6px;">{{ k.label }}</span>
-              </a>
-            </sc-for>
-          </div>
-        </sc-if>
 
-        <button onClick="{{ goAutomations }}" aria-current="{{ autoCurrent }}" style="display:flex; align-items:center; gap:10px; width:100%; height:32px; padding:0 10px; border-radius:8px; border:0.8px solid {{ autoNav.bd }}; background:{{ autoNav.bg }}; box-shadow:{{ autoNav.shadow }}; cursor:pointer; text-align:left; color:#1f2937;" style-hover="background:{{ autoNav.hover }}">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linecap="round"><rect x="3" y="3" width="7" height="7" rx="2"></rect><path d="M6.5 10v4a3 3 0 0 0 3 3H14"></path><rect x="14" y="14" width="7" height="7" rx="2"></rect></svg>
-          <span style="font-size:14px;">Automations</span>
-        </button>
         <button onClick="{{ goCases }}" aria-current="{{ casesCurrent }}" style="display:flex; align-items:center; gap:10px; width:100%; height:32px; padding:0 10px; border-radius:8px; border:0.8px solid {{ casesNav.bd }}; background:{{ casesNav.bg }}; box-shadow:{{ casesNav.shadow }}; cursor:pointer; text-align:left; color:#1f2937;" style-hover="background:{{ casesNav.hover }}">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M8.5 7V5.5A1.5 1.5 0 0 1 10 4h4a1.5 1.5 0 0 1 1.5 1.5V7M3 12.5h18"></path></svg>
           <span style="font-size:14px;">Case Studies</span>
+        </button>
+        <button onClick="{{ goAutomations }}" aria-current="{{ autoCurrent }}" style="display:flex; align-items:center; gap:10px; width:100%; height:32px; padding:0 10px; border-radius:8px; border:0.8px solid {{ autoNav.bd }}; background:{{ autoNav.bg }}; box-shadow:{{ autoNav.shadow }}; cursor:pointer; text-align:left; color:#1f2937;" style-hover="background:{{ autoNav.hover }}">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linecap="round"><rect x="3" y="3" width="7" height="7" rx="2"></rect><path d="M6.5 10v4a3 3 0 0 0 3 3H14"></path><rect x="14" y="14" width="7" height="7" rx="2"></rect></svg>
+          <span style="font-size:14px;">Automations</span>
         </button>
       </div>
 
       <div style="font-size:12px; color:#4b5563; letter-spacing:.02em; margin:22px 2px 8px;">ANALYTICS &amp; INSIGHTS</div>
       <div style="display:flex; flex-direction:column; gap:2px;">
-        <button style="display:flex; align-items:center; gap:10px; width:100%; height:32px; padding:0 10px; border-radius:8px; border:0.8px solid transparent; background:transparent; cursor:pointer; text-align:left; color:#1f2937;" style-hover="background:#efefef">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4b5563" stroke-width="1.6"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5.5"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span style="font-size:14px;">Attribution</span>
-        </button>
         <button onClick="{{ goFunnel }}" aria-current="{{ funnelCurrent }}" style="display:flex; align-items:center; gap:10px; width:100%; height:32px; padding:0 10px; border-radius:8px; border:0.8px solid {{ funnelNav.bd }}; background:{{ funnelNav.bg }}; box-shadow:{{ funnelNav.shadow }}; cursor:pointer; text-align:left; color:#1f2937;" style-hover="background:{{ funnelNav.hover }}">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round"><path d="M21 4H3l7 8.5V19l4 2v-8.5z"></path></svg>
           <span style="font-size:14px;">Funnel Performance</span>
@@ -130,10 +104,6 @@ input::placeholder{color:#6b7280}
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M8 16v-4M12 16V8M16 16v-6"></path></svg>
           <span style="font-size:14px;">Audience Insights</span>
         </button>
-        <button onClick="{{ goReports }}" aria-current="{{ reportsCurrent }}" style="display:flex; align-items:center; gap:10px; width:100%; height:32px; padding:0 10px; border-radius:8px; border:0.8px solid {{ reportsNav.bd }}; background:{{ reportsNav.bg }}; box-shadow:{{ reportsNav.shadow }}; cursor:pointer; text-align:left; color:#1f2937;" style-hover="background:{{ reportsNav.hover }}">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round"><path d="M4 20h16a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 20 7h-7.5l-2-3H4a1.5 1.5 0 0 0-1.5 1.5v13A1.5 1.5 0 0 0 4 20z"></path></svg>
-          <span style="font-size:14px;">Reports</span>
-        </button>
       </div>
 
       <div style="font-size:12px; color:#6b7280; letter-spacing:.02em; margin:22px 2px 8px;">WORKSPACE</div>
@@ -141,14 +111,6 @@ input::placeholder{color:#6b7280}
         <button onClick="{{ goFeedback }}" aria-current="{{ feedbackCurrent }}" style="display:flex; align-items:center; gap:10px; width:100%; height:32px; padding:0 10px; border-radius:8px; border:0.8px solid {{ feedbackNav.bd }}; background:{{ feedbackNav.bg }}; box-shadow:{{ feedbackNav.shadow }}; cursor:pointer; text-align:left; color:#1f2937;" style-hover="background:{{ feedbackNav.hover }}">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round"><path d="M20.5 14.5a2 2 0 0 1-2 2H8l-4.5 4V5a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2z"></path></svg>
           <span style="font-size:14px;">Feedback</span>
-        </button>
-        <button onClick="{{ goHelp }}" aria-current="{{ helpCurrent }}" style="display:flex; align-items:center; gap:10px; width:100%; height:32px; padding:0 10px; border-radius:8px; border:0.8px solid {{ helpNav.bd }}; background:{{ helpNav.bg }}; box-shadow:{{ helpNav.shadow }}; cursor:pointer; text-align:left; color:#1f2937;" style-hover="background:{{ helpNav.hover }}">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round"><path d="M3.5 14h3a1.5 1.5 0 0 1 1.5 1.5v3A1.5 1.5 0 0 1 6.5 20h-1a2 2 0 0 1-2-2v-6a8.5 8.5 0 0 1 17 0v6a2 2 0 0 1-2 2h-1a1.5 1.5 0 0 1-1.5-1.5v-3a1.5 1.5 0 0 1 1.5-1.5h3"></path></svg>
-          <span style="font-size:14px;">Help &amp; Support</span>
-        </button>
-        <button onClick="{{ goSettings }}" aria-current="{{ settingsCurrent }}" style="display:flex; align-items:center; gap:10px; width:100%; height:32px; padding:0 10px; border-radius:8px; border:0.8px solid {{ settingsNav.bd }}; background:{{ settingsNav.bg }}; box-shadow:{{ settingsNav.shadow }}; cursor:pointer; text-align:left; color:#1f2937;" style-hover="background:{{ settingsNav.hover }}">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4b5563" stroke-width="1.6"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
-          <span style="font-size:14px;">Settings</span>
         </button>
       </div>
     </nav>
@@ -160,9 +122,8 @@ input::placeholder{color:#6b7280}
           <span style="position:absolute; inset:0; border-radius:50%; background:#10b981; box-shadow:0 0 0 2px #fff;"></span>
         </span>
       </span>
-      <span style="flex:1; min-width:0; display:flex; flex-direction:column; line-height:1.3;">
+      <span style="flex:1; min-width:0; display:flex; flex-direction:column; line-height:1.3; justify-content:center;">
         <span style="font-size:14px; font-weight:500;">Imad Tlais</span>
-        <span style="font-size:12px; color:#6b7280; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">imad_tlais@hotmail.com</span>
       </span>
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4b5563" stroke-width="1.8" stroke-linecap="round"><path d="m7 15 5 5 5-5M7 9l5-5 5 5"></path></svg>
     </button>
@@ -190,9 +151,6 @@ input::placeholder{color:#6b7280}
       <button aria-label="Notifications" style="width:30px; height:30px; display:flex; align-items:center; justify-content:center; border:0; background:transparent; border-radius:6px; cursor:pointer; color:#4b5563;" style-hover="animation:wiggle .6s ease; color:#1f2937">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg>
       </button>
-      <button aria-label="Settings" style="width:30px; height:30px; display:flex; align-items:center; justify-content:center; border:0; background:transparent; border-radius:6px; cursor:pointer; color:#4b5563; transition:transform .4s cubic-bezier(.16,1,.3,1);" style-hover="transform:rotate(90deg); color:#1f2937">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
-      </button>
     </div>
   </header>
 
@@ -200,8 +158,8 @@ input::placeholder{color:#6b7280}
     <sc-if value="{{ isOverview }}" hint-placeholder-val="{{ true }}">
     <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-bottom:12px;">
       <div style="min-width:0;">
-        <h1 style="margin:0; font-size:24px; font-weight:500; letter-spacing:-0.02em; display:flex; align-items:center; gap:8px;">Hello, Imad Tlais <span role="img" aria-label="waving hand" style="display:inline-block; transform-origin:70% 70%; animation:wave 1.8s ease .4s 1 both;">👋</span></h1>
-        <p style="margin:14px 0 0; font-size:13px; color:#4b5563;">Here's how your campaigns are performing this period.</p>
+        <h1 style="margin:0; font-size:24px; font-weight:500; letter-spacing:-0.02em; display:flex; align-items:center; gap:8px;">Hello, Hiring Manager <span role="img" aria-label="waving hand" style="display:inline-block; transform-origin:70% 70%; animation:wave 1.8s ease .4s 1 both;">👋</span></h1>
+        <p style="margin:14px 0 0; font-size:13px; color:#4b5563;">Here's an example dashboard that I built. The numbers throughout are placeholders, but the Case Studies section includes my real work.</p>
       </div>
       <div style="display:flex; align-items:center; gap:8px;">
         <div data-dd="range" style="position:relative;">
@@ -248,7 +206,7 @@ input::placeholder{color:#6b7280}
               <div style="display:flex; align-items:center; justify-content:space-between; padding:6px 8px 8px;">
                 <span style="font-size:14px;">{{ k.title }}</span>
                 <span style="display:flex; color:#4b5563; transition:transform .35s cubic-bezier(.16,1,.3,1);" style-hover="transform:rotate(-12deg) scale(1.15); color:#1f2937">
-                  <sc-if value="{{ k.isReach }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5.5c0-1.4-2.2-2.5-5-2.5s-5 1.3-5 3 2.2 2.7 5 3 5 1.3 5 3-2.2 3-5 3-5-1.1-5-2.5"></path></svg></sc-if>
+                  <sc-if value="{{ k.isReach }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M17 7c0-1.6-2.2-2.9-5-2.9s-5 1.3-5 3 2.2 2.7 5 3 5 1.3 5 3-2.2 2.9-5 2.9-5-1.3-5-2.9"></path></svg></sc-if>
                   <sc-if value="{{ k.isEng }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="9" cy="8" r="4"></circle><path d="M2.5 20a6.5 6.5 0 0 1 13 0M19 8v6M16 11h6"></path></svg></sc-if>
                   <sc-if value="{{ k.isConv }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="9"></circle><path d="M15 9.2c-.5-1-1.6-1.7-3-1.7-1.8 0-3 .9-3 2.2 0 3 6 1.6 6 4.6 0 1.3-1.3 2.2-3 2.2-1.5 0-2.6-.7-3.1-1.8M12 6v1.5M12 16.5V18"></path></svg></sc-if>
                 </span>
@@ -335,9 +293,25 @@ input::placeholder{color:#6b7280}
             </div>
           </div>
         </section>
+
+        <section aria-label="Case studies" style="background-color:#f6f6f6; background-image:repeating-linear-gradient(135deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 7px); border:0.8px solid #ececec; border-radius:12px; padding:4px; animation:rise .52s cubic-bezier(.16,1,.3,1) .18s both;">
+          <div style="display:flex; align-items:center; justify-content:space-between; padding:6px 8px 8px;">
+            <h3 style="margin:0; font-size:14px; font-weight:400;">Case Studies</h3>
+            <button onClick="{{ goCases }}" style="border:0; background:transparent; cursor:pointer; font-size:12.5px; color:#4b5563;" style-hover="color:#1f2937">View all →</button>
+          </div>
+          <div style="background:#fff; border:0.8px solid #e5e7eb; border-radius:9px; padding:4px; display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:4px;">
+            <sc-for list="{{ cs.roles }}" as="r" hint-placeholder-count="2">
+              <button onClick="{{ r.onOverviewClick }}" style="display:flex; flex-direction:column; gap:6px; text-align:left; padding:14px; border-radius:8px; border:0; background:transparent; cursor:pointer;" style-hover="background:#fafafa">
+                <span style="display:flex; justify-content:space-between; gap:8px; font-size:12px; color:#6b7280;"><span>{{ r.company }}</span><span style="color:#059669; font-weight:500;">{{ r.tag }}</span></span>
+                <span style="font-size:13px; color:#4b5563;">{{ r.title }}</span>
+              </button>
+            </sc-for>
+          </div>
+        </section>
+
       </div>
 
-      <section aria-label="Top Content" style="flex:1 1 332px; min-width:0; height:560px; display:flex; flex-direction:column; background-color:#f6f6f6; background-image:repeating-linear-gradient(135deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 7px); border:0.8px solid #ececec; border-radius:12px; padding:4px; animation:rise .52s cubic-bezier(.16,1,.3,1) .1s both;">
+      <section aria-label="Top Content" style="flex:1 1 332px; min-width:0; align-self:stretch; display:flex; flex-direction:column; background-color:#f6f6f6; background-image:repeating-linear-gradient(135deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 7px); border:0.8px solid #ececec; border-radius:12px; padding:4px; animation:rise .52s cubic-bezier(.16,1,.3,1) .1s both;">
         <div style="display:flex; align-items:center; justify-content:space-between; padding:6px 8px 8px;">
           <h2 style="margin:0; font-size:14px; font-weight:400;">Top Content</h2>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4b5563" stroke-width="1.6" stroke-linejoin="round"><path d="M4 21h15a2 2 0 0 0 2-2V4.5A1.5 1.5 0 0 0 19.5 3h-11A1.5 1.5 0 0 0 7 4.5V19a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-8a1.5 1.5 0 0 1 1.5-1.5H7"></path><path d="M11 7.5h6v4h-6zM11 15.5h6"></path></svg>
@@ -397,137 +371,7 @@ input::placeholder{color:#6b7280}
       </section>
     </div>
 
-    <section aria-label="Attribution" style="background-color:#f6f6f6; background-image:repeating-linear-gradient(135deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 7px); border:0.8px solid #ececec; border-radius:12px; padding:4px; animation:rise .52s cubic-bezier(.16,1,.3,1) .25s both;">
-      <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; padding:6px 6px 8px 8px;">
-        <div style="display:flex; align-items:center; gap:10px;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4b5563" stroke-width="1.6"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5.5"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <h2 style="margin:0; font-size:14px; font-weight:400;">Attribution</h2>
-        </div>
-        <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
-          <label style="display:flex; align-items:center; gap:8px; height:32px; width:240px; max-width:100%; padding:0 10px; border:0.8px solid #e5e7eb; background:#fff; border-radius:6px; color:#4b5563;">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7.5"></circle><path d="m20.5 20.5-4-4"></path></svg>
-            <input value="{{ q }}" onChange="{{ onQ }}" placeholder="Campaign" aria-label="Search campaigns" style="flex:1; min-width:0; border:0; outline:none; background:transparent; font-size:13px; color:#1f2937;">
-          </label>
-          <div data-dd="filter" style="position:relative;">
-            <button onClick="{{ tgFilter }}" aria-haspopup="menu" aria-expanded="{{ filterOpen }}" style="display:flex; align-items:center; gap:7px; height:32px; padding:0 10px; border:0.8px solid #e5e7eb; background:#fff; border-radius:6px; cursor:pointer; font-size:12.5px;" style-hover="background:#fafafa">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4b5563" stroke-width="1.8" stroke-linejoin="round"><path d="M21 4H3l7 8.5V19l4 2v-8.5z"></path></svg>
-              <span>Filter</span>
-              <sc-if value="{{ fCount }}" hint-placeholder-val="{{ false }}"><span style="min-width:18px; height:18px; padding:0 5px; border-radius:9px; background:#1f2937; color:#fff; font-size:11px; display:flex; align-items:center; justify-content:center; animation:pop .26s cubic-bezier(.16,1,.3,1) both;">{{ fCount }}</span></sc-if>
-            </button>
-            <sc-if value="{{ filterOpen }}" hint-placeholder-val="{{ false }}">
-              <div role="menu" style="position:absolute; right:0; top:calc(100% + 6px); width:210px; background:#fff; border:0.8px solid #e5e7eb; border-radius:8px; box-shadow:0 10px 30px rgba(0,0,0,0.08); padding:4px; z-index:40; animation:rise .25s cubic-bezier(.16,1,.3,1) both;">
-                <div style="font-size:11.5px; color:#6b7280; padding:6px 8px 4px;">Channel</div>
-                <sc-for list="{{ chOpts }}" as="o" hint-placeholder-count="3">
-                  <button role="menuitemcheckbox" aria-checked="{{ o.on }}" onClick="{{ o.onClick }}" style="display:flex; align-items:center; gap:9px; width:100%; height:32px; padding:0 8px; border:0; background:transparent; border-radius:6px; cursor:pointer; font-size:13px; text-align:left;" style-hover="background:#f3f4f6">
-                    <span style="width:15px; height:15px; border-radius:4px; border:0.8px solid {{ o.bd }}; background:{{ o.bg }}; display:flex; align-items:center; justify-content:center;"><sc-if value="{{ o.on }}"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" style="animation:pop .26s cubic-bezier(.16,1,.3,1) both;"><path d="M20 6 9 17l-5-5"></path></svg></sc-if></span>
-                    <svg width="14" height="14" viewBox="0 0 14 14"><rect x="1" y="8" width="3" height="5" rx="0.8" fill="{{ o.b1 }}"></rect><rect x="5.5" y="5" width="3" height="8" rx="0.8" fill="{{ o.b2 }}"></rect><rect x="10" y="2" width="3" height="11" rx="0.8" fill="{{ o.b3 }}"></rect></svg>
-                    <span>{{ o.label }}</span>
-                  </button>
-                </sc-for>
-                <div style="font-size:11.5px; color:#6b7280; padding:8px 8px 4px;">Status</div>
-                <sc-for list="{{ stOpts }}" as="o" hint-placeholder-count="3">
-                  <button role="menuitemcheckbox" aria-checked="{{ o.on }}" onClick="{{ o.onClick }}" style="display:flex; align-items:center; gap:9px; width:100%; height:32px; padding:0 8px; border:0; background:transparent; border-radius:6px; cursor:pointer; font-size:13px; text-align:left;" style-hover="background:#f3f4f6">
-                    <span style="width:15px; height:15px; border-radius:4px; border:0.8px solid {{ o.bd }}; background:{{ o.bg }}; display:flex; align-items:center; justify-content:center;"><sc-if value="{{ o.on }}"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" style="animation:pop .26s cubic-bezier(.16,1,.3,1) both;"><path d="M20 6 9 17l-5-5"></path></svg></sc-if></span>
-                    <span style="display:flex; color:{{ o.color }};">
-                      <sc-if value="{{ o.isLive }}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="2"></circle><path d="M16.2 7.8a6 6 0 0 1 0 8.4M7.8 16.2a6 6 0 0 1 0-8.4M19 5a10 10 0 0 1 0 14M5 19A10 10 0 0 1 5 5"></path></svg></sc-if>
-                      <sc-if value="{{ o.isSched }}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></sc-if>
-                      <sc-if value="{{ o.isEnded }}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"></path></svg></sc-if>
-                    </span>
-                    <span>{{ o.label }}</span>
-                  </button>
-                </sc-for>
-                <div style="height:0.8px; background:#e5e7eb; margin:4px 0;"></div>
-                <button onClick="{{ clearFilters }}" disabled="{{ noFilters }}" style="display:flex; align-items:center; width:100%; height:32px; padding:0 8px; border:0; background:transparent; border-radius:6px; cursor:pointer; font-size:13px; color:#4b5563;" style-hover="background:#f3f4f6">Clear filters</button>
-              </div>
-            </sc-if>
-          </div>
-          <div data-dd="tact" style="position:relative;">
-            <button onClick="{{ tgTact }}" aria-label="Table actions" aria-haspopup="menu" aria-expanded="{{ tactOpen }}" style="width:32px; height:32px; display:flex; align-items:center; justify-content:center; border:0.8px solid #e5e7eb; background:#fff; border-radius:6px; cursor:pointer;" style-hover="background:#fafafa">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="#1f2937"><circle cx="12" cy="5" r="1.6"></circle><circle cx="12" cy="12" r="1.6"></circle><circle cx="12" cy="19" r="1.6"></circle></svg>
-            </button>
-            <sc-if value="{{ tactOpen }}" hint-placeholder-val="{{ false }}">
-              <div role="menu" style="position:absolute; right:0; top:calc(100% + 6px); min-width:200px; background:#fff; border:0.8px solid #e5e7eb; border-radius:8px; box-shadow:0 10px 30px rgba(0,0,0,0.08); padding:4px; z-index:40; animation:rise .25s cubic-bezier(.16,1,.3,1) both;">
-                <button role="menuitem" onClick="{{ exportSel }}" disabled="{{ noSel }}" style="display:flex; align-items:center; gap:8px; width:100%; height:32px; padding:0 8px; border:0; background:transparent; border-radius:6px; cursor:pointer; font-size:13px; opacity:{{ selOpacity }};" style-hover="background:#f3f4f6"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4b5563" stroke-width="1.8" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"></path></svg>Export selected ({{ selCount }})</button>
-                <button role="menuitem" onClick="{{ exportAll }}" style="display:flex; align-items:center; gap:8px; width:100%; height:32px; padding:0 8px; border:0; background:transparent; border-radius:6px; cursor:pointer; font-size:13px;" style-hover="background:#f3f4f6"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4b5563" stroke-width="1.8" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"></path></svg>Export all as CSV</button>
-                <div style="height:0.8px; background:#e5e7eb; margin:4px 0;"></div>
-                <button role="menuitem" onClick="{{ resetSort }}" style="display:flex; align-items:center; gap:8px; width:100%; height:32px; padding:0 8px; border:0; background:transparent; border-radius:6px; cursor:pointer; font-size:13px;" style-hover="background:#f3f4f6"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4b5563" stroke-width="1.8" stroke-linecap="round"><path d="m21 16-4 4-4-4M17 20V4M3 8l4-4 4 4M7 4v16"></path></svg>Reset sorting</button>
-                <button role="menuitem" onClick="{{ clearSel }}" style="display:flex; align-items:center; gap:8px; width:100%; height:32px; padding:0 8px; border:0; background:transparent; border-radius:6px; cursor:pointer; font-size:13px;" style-hover="background:#f3f4f6"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4b5563" stroke-width="1.8" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"></path></svg>Clear selection</button>
-              </div>
-            </sc-if>
-          </div>
-        </div>
-      </div>
-
-      <div style="background:#fff; border:0.8px solid #e5e7eb; border-radius:9px; overflow-x:auto;">
-        <div role="table" aria-label="Attribution campaigns" aria-rowcount="{{ rowCount }}" style="min-width:1138px;">
-          <div role="row" style="display:grid; grid-template-columns:48px minmax(240px,2.3fr) 1.1fr 1fr 1.3fr 1.1fr 1.1fr 1fr 48px; align-items:center; height:42px; background:#f7f7f7; border-bottom:0.8px solid #e5e7eb; font-size:13px;">
-            <div role="columnheader" style="display:flex; justify-content:center;">
-              <button role="checkbox" aria-checked="{{ all.aria }}" aria-label="Select all" onClick="{{ all.onClick }}" style="width:16px; height:16px; padding:0; border-radius:4px; border:0.8px solid {{ all.bd }}; background:{{ all.bg }}; display:flex; align-items:center; justify-content:center; cursor:pointer;">
-                <sc-if value="{{ all.checked }}"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" style="animation:pop .26s cubic-bezier(.16,1,.3,1) both;"><path d="M20 6 9 17l-5-5"></path></svg></sc-if>
-                <sc-if value="{{ all.mixed }}"><span style="width:8px; height:2px; background:#fff; border-radius:1px; animation:pop .26s cubic-bezier(.16,1,.3,1) both;"></span></sc-if>
-              </button>
-            </div>
-            <sc-for list="{{ cols }}" as="c" hint-placeholder-count="7">
-              <div role="columnheader" aria-sort="{{ c.aria }}" style="grid-column:{{ c.gc }};">
-                <button onClick="{{ c.onClick }}" style="display:flex; align-items:center; gap:8px; border:0; background:transparent; padding:4px 0; cursor:pointer; font-size:13px; color:#1f2937;" style-hover="color:#000">
-                  <span>{{ c.label }}</span>
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M7 20V5M3 9l4-4 4 4" stroke="{{ c.up }}"></path><path d="M17 4v15M13 15l4 4 4-4" stroke="{{ c.down }}"></path></svg>
-                </button>
-              </div>
-            </sc-for>
-          </div>
-          <sc-if value="{{ tableOn }}" hint-placeholder-val="{{ true }}">
-            <div role="rowgroup">
-              <sc-for list="{{ trows }}" as="r" hint-placeholder-count="4">
-                <div role="row" aria-selected="{{ r.checked }}" style="display:grid; grid-template-columns:48px minmax(240px,2.3fr) 1.1fr 1fr 1.3fr 1.1fr 1.1fr 1fr 48px; align-items:center; height:45.75px; border-bottom:0.8px solid #e5e7eb; font-size:13.5px; background:{{ r.rowBg }}; transition:background .2s; animation:rise .52s cubic-bezier(.16,1,.3,1) both; animation-delay:{{ r.delay }};" style-hover="background:#fafafa">
-                  <div role="cell" style="display:flex; justify-content:center;">
-                    <button role="checkbox" aria-checked="{{ r.checked }}" aria-label="{{ r.selLabel }}" onClick="{{ r.onToggle }}" style="width:16px; height:16px; padding:0; border-radius:4px; border:0.8px solid {{ r.cbBd }}; background:{{ r.cbBg }}; display:flex; align-items:center; justify-content:center; cursor:pointer;">
-                      <sc-if value="{{ r.checked }}"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" style="animation:pop .26s cubic-bezier(.16,1,.3,1) both;"><path d="M20 6 9 17l-5-5"></path></svg></sc-if>
-                    </button>
-                  </div>
-                  <div role="cell" style="color:#1f2937; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; padding-right:12px;">{{ r.name }}</div>
-                  <div role="cell" style="display:flex; align-items:center; gap:8px; color:#52525b;">
-                    <svg width="14" height="14" viewBox="0 0 14 14"><rect x="1" y="8" width="3" height="5" rx="0.8" fill="{{ r.b1 }}"></rect><rect x="5.5" y="5" width="3" height="8" rx="0.8" fill="{{ r.b2 }}"></rect><rect x="10" y="2" width="3" height="11" rx="0.8" fill="{{ r.b3 }}"></rect></svg>
-                    <span>{{ r.channel }}</span>
-                  </div>
-                  <div role="cell" style="display:flex; align-items:center; gap:8px; color:#52525b;">
-                    <span style="width:8px; height:8px; border-radius:2px; background:{{ r.tierColor }};"></span>
-                    <span>{{ r.tierLabel }}</span>
-                  </div>
-                  <div role="cell" style="display:flex; align-items:center; gap:8px; color:#52525b;">
-                    <span style="width:22px; height:22px; border-radius:50%; background:{{ r.avBg }}; color:{{ r.avFg }}; border:0.8px solid rgba(0,0,0,0.06); font-size:9.5px; font-weight:600; display:flex; align-items:center; justify-content:center; transition:transform .25s cubic-bezier(.16,1,.3,1);" style-hover="transform:scale(1.12)">{{ r.initials }}</span>
-                    <span>{{ r.owner }}</span>
-                  </div>
-                  <div role="cell" style="display:flex; align-items:center; gap:8px; color:#52525b;">
-                    <span style="display:flex; color:{{ r.stColor }}; animation:pop .26s cubic-bezier(.16,1,.3,1) both; animation-delay:{{ r.popDelay }};">
-                      <sc-if value="{{ r.isLive }}"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="2"></circle><path d="M16.2 7.8a6 6 0 0 1 0 8.4M7.8 16.2a6 6 0 0 1 0-8.4M19 5a10 10 0 0 1 0 14M5 19A10 10 0 0 1 5 5"></path></svg></sc-if>
-                      <sc-if value="{{ r.isSched }}"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></sc-if>
-                      <sc-if value="{{ r.isEnded }}"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"></path></svg></sc-if>
-                    </span>
-                    <span>{{ r.status }}</span>
-                  </div>
-                  <div role="cell" style="color:#52525b; font-variant-numeric:tabular-nums;">{{ r.date }}</div>
-                  <div role="cell" style="color:#52525b; font-variant-numeric:tabular-nums;">{{ r.budgetLabel }}</div>
-                  <div role="cell" data-dd="row" style="display:flex; justify-content:center;">
-                    <button onClick="{{ r.onMenu }}" aria-label="{{ r.menuLabel }}" aria-haspopup="menu" aria-expanded="{{ r.menuOpen }}" style="width:28px; height:28px; display:flex; align-items:center; justify-content:center; border:0; background:transparent; border-radius:6px; cursor:pointer;" style-hover="background:#f3f4f6">
-                      <svg width="15" height="15" viewBox="0 0 24 24" fill="#1f2937"><circle cx="12" cy="5" r="1.6"></circle><circle cx="12" cy="12" r="1.6"></circle><circle cx="12" cy="19" r="1.6"></circle></svg>
-                    </button>
-                  </div>
-                </div>
-              </sc-for>
-            </div>
-          </sc-if>
-          <sc-if value="{{ tEmpty }}" hint-placeholder-val="{{ false }}">
-            <div style="display:flex; flex-direction:column; align-items:center; text-align:center; padding:44px 12px; animation:fade .3s both;">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round" style="opacity:.6;"><circle cx="11" cy="11" r="7.5"></circle><path d="m20.5 20.5-4-4"></path></svg>
-              <div style="margin-top:12px; font-size:13.5px; font-weight:500;">No campaigns match</div>
-              <div style="margin-top:4px; font-size:12.5px; color:#6b7280;">Adjust the search or filters.</div>
-              <button onClick="{{ resetTable }}" style="margin-top:14px; height:30px; padding:0 12px; border:0.8px solid #e5e7eb; background:#fff; border-radius:6px; cursor:pointer; font-size:12.5px;" style-hover="background:#fafafa">Reset</button>
-            </div>
-          </sc-if>
-        </div>
-      </div>
-    </section>
+    
     </sc-if>
     </sc-if>
 
@@ -762,6 +606,17 @@ input::placeholder{color:#6b7280}
           <h1 style="margin:0; font-size:24px; font-weight:500; letter-spacing:-0.02em;">Case Studies</h1>
           <p style="margin:14px 0 0; font-size:13px; color:#4b5563;">Selected work by Imad Tlais, Digital Marketing Specialist, across Meta, Google and LinkedIn.</p>
         </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:16px;">
+        <sc-for list="{{ cs.summary }}" as="k" hint-placeholder-count="4">
+          <div style="background-color:#f6f6f6; background-image:repeating-linear-gradient(135deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 7px); border:0.8px solid #ececec; border-radius:12px; padding:4px; animation:rise .52s cubic-bezier(.16,1,.3,1) both; animation-delay:{{ k.delay }};">
+            <div style="background:#fff; border:0.8px solid #e5e7eb; border-radius:9px; padding:16px 12px;">
+              <div style="font-size:22px; font-weight:600; letter-spacing:-0.02em; line-height:1;">{{ k.value }}</div>
+              <div style="margin-top:8px; font-size:12px; color:#6b7280;">{{ k.label }}</div>
+            </div>
+          </div>
+        </sc-for>
       </div>
 
       <div role="tablist" aria-label="Role" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:12px;">
@@ -1001,6 +856,20 @@ input::placeholder{color:#6b7280}
       </div>
       </sc-if>
 
+      <section aria-label="Skills and tools" style="background-color:#f6f6f6; background-image:repeating-linear-gradient(135deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 7px); border:0.8px solid #ececec; border-radius:12px; padding:4px; animation:rise .52s cubic-bezier(.16,1,.3,1) both;">
+        <div style="padding:6px 8px 8px;"><h3 style="margin:0; font-size:14px; font-weight:400;">Skills &amp; tools</h3></div>
+        <div style="background:#fff; border:0.8px solid #e5e7eb; border-radius:9px; padding:18px; display:flex; flex-direction:column; gap:14px;">
+          <sc-for list="{{ cs.skills }}" as="g" hint-placeholder-count="3">
+            <div style="display:flex; gap:16px; flex-wrap:wrap; align-items:baseline;">
+              <span style="width:130px; flex-shrink:0; font-size:12.5px; color:#6b7280;">{{ g.group }}</span>
+              <div style="display:flex; flex-wrap:wrap; gap:6px; flex:1; min-width:200px;">
+                <sc-for list="{{ g.items }}" as="c" hint-placeholder-count="4"><span style="height:26px; padding:0 10px; display:flex; align-items:center; border:0.8px solid #e5e7eb; border-radius:13px; font-size:12.5px; color:#1f2937; background:#fafafa;">{{ c }}</span></sc-for>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+
       <p style="margin:0; font-size:12px; color:#9ca3af;">The headline figures are the ones on my resume. The charts are illustrative trends built from those reported ranges.</p>
     </div>
     </sc-if>
@@ -1126,55 +995,6 @@ input::placeholder{color:#6b7280}
     </div>
     </sc-if>
 
-    <sc-if value="{{ isReports }}" hint-placeholder-val="{{ false }}">
-    <div style="display:flex; flex-direction:column; gap:16px;">
-      <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:16px; flex-wrap:wrap;">
-        <div><h1 style="margin:0; font-size:24px; font-weight:500; letter-spacing:-0.02em;">Reports</h1><p style="margin:14px 0 0; font-size:13px; color:#4b5563;">Generate and download reports from your campaign data.</p></div>
-        <div data-dd="genrep" style="position:relative;">
-          <button onClick="{{ tgGenRep }}" aria-haspopup="menu" aria-expanded="{{ genRepOpen }}" style="display:flex; align-items:center; gap:8px; height:34px; padding:0 14px; border:0; background:#1f2937; color:#fff; border-radius:7px; cursor:pointer; font-size:13px; font-weight:500;" style-hover="background:#111827">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg>
-            New report
-          </button>
-          <sc-if value="{{ genRepOpen }}" hint-placeholder-val="{{ false }}">
-            <div role="menu" style="position:absolute; right:0; top:calc(100% + 6px); min-width:200px; background:#fff; border:0.8px solid #e5e7eb; border-radius:8px; box-shadow:0 10px 30px rgba(0,0,0,0.08); padding:4px; z-index:40; animation:rise .25s cubic-bezier(.16,1,.3,1) both;">
-              <sc-for list="{{ genRepOpts }}" as="o" hint-placeholder-count="4">
-                <button role="menuitem" onClick="{{ o.onClick }}" style="display:flex; align-items:center; gap:8px; width:100%; height:32px; padding:0 8px; border:0; background:transparent; border-radius:6px; cursor:pointer; font-size:13px; text-align:left;" style-hover="background:#f3f4f6">{{ o.label }}</button>
-              </sc-for>
-            </div>
-          </sc-if>
-        </div>
-      </div>
-
-      <div style="background-color:#f6f6f6; background-image:repeating-linear-gradient(135deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 7px); border:0.8px solid #ececec; border-radius:12px; padding:4px;">
-        <div style="background:#fff; border:0.8px solid #e5e7eb; border-radius:9px; overflow-x:auto;">
-          <div role="table" aria-label="Reports" style="min-width:640px;">
-            <div role="row" style="display:grid; grid-template-columns:minmax(220px,2fr) 1fr 1fr 90px; align-items:center; height:42px; padding-left:16px; background:#f7f7f7; border-bottom:0.8px solid #e5e7eb; font-size:13px; color:#1f2937;">
-              <div>Report</div><div>Created</div><div>Range</div><div></div>
-            </div>
-            <sc-for list="{{ reports }}" as="rp" hint-placeholder-count="5">
-              <div role="row" style="display:grid; grid-template-columns:minmax(220px,2fr) 1fr 1fr 128px; align-items:center; height:48px; padding-left:16px; border-bottom:0.8px solid #e5e7eb; font-size:13.5px; animation:rise .45s cubic-bezier(.16,1,.3,1) both; animation-delay:{{ rp.delay }};" style-hover="background:#fafafa">
-                <div style="display:flex; align-items:center; gap:10px; color:#1f2937; overflow:hidden;">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4b5563" stroke-width="1.7" stroke-linejoin="round" style="flex-shrink:0;"><path d="M4 20h16a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 20 7h-7.5l-2-3H4a1.5 1.5 0 0 0-1.5 1.5v13A1.5 1.5 0 0 0 4 20z"></path></svg>
-                  <span style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">{{ rp.name }}</span>
-                </div>
-                <div style="color:#52525b;">{{ rp.created }}</div>
-                <div style="color:#52525b;">{{ rp.range }}</div>
-                <div style="display:flex; justify-content:flex-end; gap:2px; padding-right:16px;">
-                  <button onClick="{{ rp.onDownload }}" aria-label="Download {{ rp.name }}" style="width:28px; height:28px; display:flex; align-items:center; justify-content:center; border:0; background:transparent; border-radius:6px; cursor:pointer; color:#4b5563;" style-hover="background:#f3f4f6; color:#1f2937">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"></path></svg>
-                  </button>
-                  <button onClick="{{ rp.onDelete }}" aria-label="Delete {{ rp.name }}" style="width:28px; height:28px; display:flex; align-items:center; justify-content:center; border:0; background:transparent; border-radius:6px; cursor:pointer; color:#4b5563;" style-hover="background:#fef2f2; color:#dc2626">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M9 7V4.5A1.5 1.5 0 0 1 10.5 3h3A1.5 1.5 0 0 1 15 4.5V7m2 0v12.5A1.5 1.5 0 0 1 15.5 21h-7A1.5 1.5 0 0 1 7 19.5V7"></path></svg>
-                  </button>
-                </div>
-              </div>
-            </sc-for>
-          </div>
-        </div>
-      </div>
-    </div>
-    </sc-if>
-
     <sc-if value="{{ isFeedback }}" hint-placeholder-val="{{ false }}">
     <div style="display:flex; flex-direction:column; gap:16px; max-width:640px;">
       <div><h1 style="margin:0; font-size:24px; font-weight:500; letter-spacing:-0.02em;">Feedback</h1><p style="margin:14px 0 0; font-size:13px; color:#4b5563;">Tell us what's working and what isn't.</p></div>
@@ -1197,18 +1017,7 @@ input::placeholder{color:#6b7280}
     </div>
     </sc-if>
 
-    <sc-if value="{{ isHelp }}" hint-placeholder-val="{{ false }}">
-    <div style="display:flex; flex-direction:column; gap:16px; max-width:720px;">
-      <div><h1 style="margin:0; font-size:24px; font-weight:500; letter-spacing:-0.02em;">Help &amp; Support</h1><p style="margin:14px 0 0; font-size:13px; color:#4b5563;">Answers to common questions.</p></div>
-      <div style="background-color:#f6f6f6; background-image:repeating-linear-gradient(135deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 7px); border:0.8px solid #ececec; border-radius:12px; padding:4px;">
-        <div style="background:#fff; border:0.8px solid #e5e7eb; border-radius:9px; padding:6px 4px;">
-          <sc-for list="{{ faqs }}" as="q" hint-placeholder-count="5">
-            <div style="border-bottom:0.8px solid #f0f0f0;">
-              <button onClick="{{ q.toggle }}" aria-expanded="{{ q.open }}" style="display:flex; align-items:center; justify-content:space-between; width:100%; padding:14px 12px; border:0; background:transparent; cursor:pointer; text-align:left; font-size:13.5px; font-weight:500; color:#1f2937;">
-                <span>{{ q.q }}</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2" stroke-linecap="round" style="flex-shrink:0; transform:{{ q.chev }}; transition:transform .25s;"><path d="m6 9 6 6 6-6"></path></svg>
-              </button>
-              <sc-if value="{{ q.open }}"><p style="margin:0; padding:0 12px 16px; font-size:13px; line-height:1.55; color:#4b5563; text-wrap:pretty; animation:fade .2s both;">{{ q.a }}</p></sc-if>
+    
             </div>
           </sc-for>
         </div>
@@ -1216,30 +1025,7 @@ input::placeholder{color:#6b7280}
     </div>
     </sc-if>
 
-    <sc-if value="{{ isSettings }}" hint-placeholder-val="{{ false }}">
-    <div style="display:flex; flex-direction:column; gap:16px; max-width:640px;">
-      <div><h1 style="margin:0; font-size:24px; font-weight:500; letter-spacing:-0.02em;">Settings</h1><p style="margin:14px 0 0; font-size:13px; color:#4b5563;">Account and preferences.</p></div>
-      <div style="background-color:#f6f6f6; background-image:repeating-linear-gradient(135deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 7px); border:0.8px solid #ececec; border-radius:12px; padding:4px;">
-        <div style="background:#fff; border:0.8px solid #e5e7eb; border-radius:9px; padding:20px; display:flex; flex-direction:column; gap:18px;">
-          <label style="display:flex; flex-direction:column; gap:6px;"><span style="font-size:13px; color:#4b5563;">Display name</span>
-            <input value="{{ setName }}" onChange="{{ onSetName }}" style="height:34px; border:0.8px solid #e5e7eb; border-radius:7px; padding:0 10px; font-size:13.5px; outline:none;">
-          </label>
-          <label style="display:flex; flex-direction:column; gap:6px;"><span style="font-size:13px; color:#4b5563;">Email</span>
-            <input value="{{ setEmail }}" onChange="{{ onSetEmail }}" style="height:34px; border:0.8px solid #e5e7eb; border-radius:7px; padding:0 10px; font-size:13.5px; outline:none;">
-          </label>
-          <sc-for list="{{ toggles }}" as="t" hint-placeholder-count="3">
-            <div style="display:flex; align-items:center; justify-content:space-between; gap:12px;">
-              <div><div style="font-size:13.5px; font-weight:500;">{{ t.label }}</div><div style="margin-top:2px; font-size:12px; color:#6b7280;">{{ t.sub }}</div></div>
-              <button onClick="{{ t.onClick }}" aria-pressed="{{ t.on }}" style="position:relative; width:38px; height:22px; border-radius:11px; border:0; background:{{ t.bg }}; cursor:pointer; transition:background .2s; flex-shrink:0;">
-                <span style="position:absolute; top:2px; left:{{ t.left }}; width:18px; height:18px; border-radius:50%; background:#fff; box-shadow:0 1px 3px rgba(0,0,0,0.2); transition:left .2s;"></span>
-              </button>
-            </div>
-          </sc-for>
-          <button onClick="{{ saveSettings }}" style="align-self:flex-start; height:34px; padding:0 16px; border:0; background:#1f2937; color:#fff; border-radius:7px; font-size:13px; font-weight:500; cursor:pointer;" style-hover="background:#111827">{{ saveLabel }}</button>
-        </div>
-      </div>
-    </div>
-    </sc-if>
+    
   </div>
 </main>
 
@@ -1290,22 +1076,15 @@ const KPIS = {
   'Last month': [[231920, 0, '', 3.8, null, '$'], [5056, 0, '', 3.1], [45.86, 2, '', 1.8, null, '$']]
 };
 const KMETA = [{ title: 'Spend' }, { title: 'Leads' }, { title: 'Cost per Lead', lowerIsBetter: true }];
-function monthLabels(refDate) {
-  const month = refDate.toLocaleString('en-US', { month: 'short' });
-  const day = refDate.getDate();
-  const n = 7;
-  const labels = [];
-  for (let i = 0; i < n; i++) {
-    labels.push(month + ' ' + (i === n - 1 ? day : Math.max(1, Math.round((i * day) / (n - 1)))));
-  }
-  return labels;
+function monthLabels(offset) {
+  const d = new Date(); d.setDate(1); d.setMonth(d.getMonth() - offset);
+  const name = d.toLocaleString('en-US', { month: 'short' });
+  return [1, 5, 9, 13, 17, 21, 25].map(n => name + ' ' + n);
 }
-const TODAY = new Date();
-const LAST_MONTH_REF = new Date(TODAY.getFullYear(), TODAY.getMonth() - 1, Math.min(TODAY.getDate(), new Date(TODAY.getFullYear(), TODAY.getMonth(), 0).getDate()));
 const CHART = {
   'This week': { total: 1284, delta: 9.6, yMax: 160, labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'], values: [42, 71, 64, 98, 112, 86, 104, 131, 118, 97, 109, 74, 88, 90] },
-  'This month': { total: 5420, delta: 7.2, yMax: 600, labels: monthLabels(TODAY), values: [312, 358, 296, 402, 428, 351, 384, 466, 419, 332, 407, 488, 371, 406] },
-  'Last month': { total: 5056, delta: 3.1, yMax: 600, labels: monthLabels(LAST_MONTH_REF), values: [298, 341, 312, 376, 344, 402, 358, 421, 367, 322, 389, 436, 351, 339] }
+  'This month': { total: 5420, delta: 7.2, yMax: 600, labels: monthLabels(0), values: [312, 358, 296, 402, 428, 351, 384, 466, 419, 332, 407, 488, 371, 406] },
+  'Last month': { total: 5056, delta: 3.1, yMax: 600, labels: monthLabels(1), values: [298, 341, 312, 376, 344, 402, 358, 421, 367, 322, 389, 436, 351, 339] }
 };
 const TYPE = { email: '#2563eb', social: '#059669', ad: '#7c3aed', alert: '#dc2626', blog: '#0891b2', review: '#d97706' };
 const CONTENT = {
@@ -1457,17 +1236,12 @@ class Component extends DCLogic {
     fbText: '', fbSent: false, faqOpen: 0,
     setName: 'Imad Tlais', setEmail: 'imad_tlais@hotmail.com', setSaved: false,
     tgEmail: true, tgWeekly: false, tgAuto: true,
-    reports: [
-      { name: 'Campaign Performance — This month', created: '2026-09-01', range: 'This month' },
-      { name: 'Campaign Performance — Last month', created: '2026-08-01', range: 'Last month' },
-      { name: 'Campaign Performance — Q3', created: '2026-07-15', range: 'This quarter' }
-    ]
   };
   searchRef = React.createRef();
   static SEARCH_INDEX = [
     ['Page', 'Dashboard', 'overview'], ['Page', 'Campaigns', 'campaigns'], ['Page', 'Channels', 'channels'], ['Page', 'Automations', 'automations'],
     ['Page', 'Case Studies', 'cases'], ['Page', 'Audience Insights', 'insights'], ['Page', 'Funnel Performance', 'funnel'], ['Page', 'Reports', 'reports'],
-    ['Page', 'Feedback', 'feedback'], ['Page', 'Help & Support', 'help'], ['Page', 'Settings', 'settings']
+    ['Page', 'Feedback', 'feedback']
   ];
   goSearch(view) { this.setState({ view, gq: '', drawer: false }); }
 
@@ -1501,20 +1275,20 @@ class Component extends DCLogic {
     window.removeEventListener('resize', this._rs);
     document.removeEventListener('mousedown', this._md);
     document.removeEventListener('keydown', this._kd);
-    ['kT', 'chT', 'cT'].forEach(k => cancelAnimationFrame(this['_r' + k]));
+    ['kT', 'chT', 'cT'].forEach(k => clearTimeout(this['_r' + k]));
   }
   anim(key) {
-    cancelAnimationFrame(this['_r' + key]);
+    clearTimeout(this['_r' + key]);
     const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (reduce) { this.setState({ [key]: 1 }); return; }
     const dur = this.props.countDuration ?? 500, s = performance.now();
     this.setState({ [key]: 0 });
-    const step = n => {
-      const p = Math.min(1, (n - s) / dur);
+    const step = () => {
+      const p = Math.min(1, (performance.now() - s) / dur);
       this.setState({ [key]: p });
-      if (p < 1) this['_r' + key] = requestAnimationFrame(step);
+      if (p < 1) this['_r' + key] = setTimeout(step, 16);
     };
-    this['_r' + key] = requestAnimationFrame(step);
+    this['_r' + key] = setTimeout(step, 16);
   }
   replay(key) {
     this.setState({ [key]: false }, () => requestAnimationFrame(() => this.setState({ [key]: true })));
@@ -1571,9 +1345,6 @@ class Component extends DCLogic {
     this.setState({ view: 'cases', drawer: false, open: null, csHov: null });
   }
   goFeedback() { this.setState({ view: 'feedback', drawer: false, open: null }); }
-  goHelp() { this.setState({ view: 'help', drawer: false, open: null }); }
-  goSettings() { this.setState({ view: 'settings', drawer: false, open: null }); }
-  goReports() { this.setState({ view: 'reports', drawer: false, open: null }); }
   goInsights() { this.setState({ view: 'insights', drawer: false, open: null }); }
   goFunnel() { this.setState({ view: 'funnel', drawer: false, open: null }); }
   funnelVals() {
@@ -1611,25 +1382,6 @@ class Component extends DCLogic {
       }
     };
   }
-  genReport(range) {
-    const name = 'Campaign Performance — ' + range;
-    const existing = this.state.reports.find(r => r.name === name);
-    if (existing) { this.setState({ open: null }); this.downloadReport(existing); return; }
-    const rp = { name, created: new Date().toISOString().slice(0, 10), range };
-    this.setState(s => ({ reports: [rp, ...s.reports], open: null }));
-    this.downloadReport(rp);
-  }
-  downloadReport(rp) {
-    const rows = this.visibleRows();
-    const esc = v => '"' + String(v).replace(/"/g, '""') + '"';
-    const csv = [COLS.map(c => c[1]), ...rows.map(r => [r.name, r.channel, TIER[r.tier].label, r.owner, r.status, r.date, budgetLabel(r.budget)])]
-      .map(a => a.map(esc).join(',')).join('\n');
-    const url = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8' }));
-    const a = document.createElement('a');
-    a.href = url; a.download = rp.name.toLowerCase().replace(/[^a-z0-9]+/g, '-') + '.csv';
-    document.body.appendChild(a); a.click(); a.remove();
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
-  }
   csLine(key, vals, yMax, band, xs, tipFmt) {
     const n = vals.length;
     const pts = vals.map((v, i) => [(i / (n - 1)) * 100, (1 - v / yMax) * 100]);
@@ -1651,7 +1403,7 @@ class Component extends DCLogic {
       { id: 'air', company: 'Airtasker', title: 'Digital Marketing Specialist', dates: 'Aug 2022 – Mar 2026', tag: 'CPL −64%' }
     ].map((r, i) => {
       const on = r.id === s.csRole;
-      return { ...r, on, delay: i * 60 + 'ms', bg: '#fff', bd: on ? '#1f2937' : '#e5e7eb', shadow: on ? '0 0 0 1px #1f2937, 0 6px 18px rgba(31,41,55,0.10)' : '0 1px 2px rgba(0,0,0,0.04)', onClick: () => this.setState({ csRole: r.id, csHov: null }) };
+      return { ...r, on, delay: i * 60 + 'ms', bg: '#fff', bd: on ? '#1f2937' : '#e5e7eb', shadow: on ? '0 0 0 1px #1f2937, 0 6px 18px rgba(31,41,55,0.10)' : '0 1px 2px rgba(0,0,0,0.04)', onClick: () => this.setState({ csRole: r.id, csHov: null }), onOverviewClick: () => this.setState({ view: 'cases', csRole: r.id, csHov: null }) };
     });
     const stat = (a, i) => ({ value: a[0], label: a[1], sub: a[2], color: a[3] || '#1f2937', delay: 80 + i * 60 + 'ms' });
     const steps = arr => arr.map((a, i) => ({ n: String(i + 1).padStart(2, '0'), title: a[0], desc: a[1], notLast: i < arr.length - 1 }));
@@ -1668,7 +1420,14 @@ class Component extends DCLogic {
     const tagC = { Scale: ['#ecfdf5', '#047857'], Keep: ['#f3f4f6', '#4b5563'], Cut: ['#fef2f2', '#b91c1c'] };
     return {
       cs: {
-        roles, isDecidr: s.csRole === 'decidr', isAir: s.csRole === 'air',
+        roles,
+        summary: [['4 yrs', 'In B2B digital marketing'], ['3', 'Platforms owned end to end — Meta, Google, LinkedIn'], ['~$300k', 'Ad spend managed'], ['6,700+', 'Leads generated across roles']].map((k, i) => ({ value: k[0], label: k[1], delay: i * 60 + 'ms' })),
+        skills: [
+          ['Paid media', ['Meta Ads', 'Google Ads', 'LinkedIn Ads', 'A/B testing', 'Landing pages']],
+          ['Marketing ops', ['HubSpot', 'Lifecycle automation', 'Lead scoring', 'Webhooks']],
+          ['Analytics & dev', ['Reporting dashboards', 'Claude Code', 'Vercel', 'Attribution']]
+        ].map(g => ({ group: g[0], items: g[1] })),
+        isDecidr: s.csRole === 'decidr', isAir: s.csRole === 'air',
         leave: () => this.setState({ csHov: null }),
         dec: {
           chips: ['Meta Ads', 'Google Ads', 'LinkedIn Ads', 'HubSpot', 'Claude Code', 'Vercel'],
@@ -1970,28 +1729,24 @@ class Component extends DCLogic {
       }))
     };
     return {
+      goCases: () => this.goCases(),
       ...this.campVals(), ...this.caseVals(), auto: autoData, chan: this.channelVals(),
       isOverview: isOv, isCampaigns: s.view === 'campaigns', isAutomations: s.view === 'automations', isChannels: s.view === 'channels', isCases: s.view === 'cases',
-      isFeedback: s.view === 'feedback', isHelp: s.view === 'help', isSettings: s.view === 'settings', isReports: s.view === 'reports', isInsights: s.view === 'insights', isFunnel: s.view === 'funnel',
-      crumb: isOv ? 'Dashboard' : { campaigns: 'Campaigns', channels: 'Channels', automations: 'Automations', cases: 'Case Studies', feedback: 'Feedback', help: 'Help & Support', settings: 'Settings', reports: 'Reports', insights: 'Audience Insights', funnel: 'Funnel Performance' }[s.view],
+      isFeedback: s.view === 'feedback', isInsights: s.view === 'insights', isFunnel: s.view === 'funnel',
+      crumb: isOv ? 'Dashboard Showcase' : { campaigns: 'Campaigns', channels: 'Channels', automations: 'Automations', cases: 'Case Studies', feedback: 'Feedback', insights: 'Audience Insights', funnel: 'Funnel Performance' }[s.view],
+      goCampaignsAll: () => this.goCampaigns('All'),
+      campNav: s.view === 'campaigns' ? { current: 'page', bg: '#fff', bd: '#e5e7eb', shadow: '0 1px 2px rgba(0,0,0,0.05)', hover: '#fff' } : { current: undefined, bg: 'transparent', bd: 'transparent', shadow: 'none', hover: '#efefef' },
+      goChannelsAll: () => this.goChannels(s.chCf || 'Email'),
+      chanNav: s.view === 'channels' ? { current: 'page', bg: '#fff', bd: '#e5e7eb', shadow: '0 1px 2px rgba(0,0,0,0.05)', hover: '#fff' } : { current: undefined, bg: 'transparent', bd: 'transparent', shadow: 'none', hover: '#efefef' },
       goInsights: () => this.goInsights(), insightsCurrent: s.view === 'insights' ? 'page' : undefined,
       insightsNav: s.view === 'insights' ? { bg: '#fff', bd: '#e5e7eb', shadow: '0 1px 2px rgba(0,0,0,0.05)', hover: '#fff' } : { bg: 'transparent', bd: 'transparent', shadow: 'none', hover: '#efefef' },
       goFunnel: () => this.goFunnel(), funnelCurrent: s.view === 'funnel' ? 'page' : undefined,
       funnelNav: s.view === 'funnel' ? { bg: '#fff', bd: '#e5e7eb', shadow: '0 1px 2px rgba(0,0,0,0.05)', hover: '#fff' } : { bg: 'transparent', bd: 'transparent', shadow: 'none', hover: '#efefef' },
       ...this.insightsVals(), ...this.funnelVals(),
-      goReports: () => this.goReports(), reportsCurrent: s.view === 'reports' ? 'page' : undefined,
-      reportsNav: s.view === 'reports' ? { bg: '#fff', bd: '#e5e7eb', shadow: '0 1px 2px rgba(0,0,0,0.05)', hover: '#fff' } : { bg: 'transparent', bd: 'transparent', shadow: 'none', hover: '#efefef' },
-      genRepOpen: s.open === 'genrep', tgGenRep: this.tg('genrep'),
-      genRepOpts: ['This week', 'This month', 'Last month', 'This quarter'].map(r => ({ label: r, onClick: () => this.genReport(r) })),
-      reports: s.reports.map((rp, i) => ({ ...rp, delay: i * 45 + 'ms', onDownload: () => this.downloadReport(rp), onDelete: () => this.setState(st => ({ reports: st.reports.filter(r => r !== rp) })) })),
       goCases: () => this.goCases(), casesCurrent: s.view === 'cases' ? 'page' : undefined,
       casesNav: s.view === 'cases' ? { bg: '#fff', bd: '#e5e7eb', shadow: '0 1px 2px rgba(0,0,0,0.05)', hover: '#fff' } : { bg: 'transparent', bd: 'transparent', shadow: 'none', hover: '#efefef' },
       goFeedback: () => this.goFeedback(), feedbackCurrent: s.view === 'feedback' ? 'page' : undefined,
       feedbackNav: s.view === 'feedback' ? { bg: '#fff', bd: '#e5e7eb', shadow: '0 1px 2px rgba(0,0,0,0.05)', hover: '#fff' } : { bg: 'transparent', bd: 'transparent', shadow: 'none', hover: '#efefef' },
-      goHelp: () => this.goHelp(), helpCurrent: s.view === 'help' ? 'page' : undefined,
-      helpNav: s.view === 'help' ? { bg: '#fff', bd: '#e5e7eb', shadow: '0 1px 2px rgba(0,0,0,0.05)', hover: '#fff' } : { bg: 'transparent', bd: 'transparent', shadow: 'none', hover: '#efefef' },
-      goSettings: () => this.goSettings(), settingsCurrent: s.view === 'settings' ? 'page' : undefined,
-      settingsNav: s.view === 'settings' ? { bg: '#fff', bd: '#e5e7eb', shadow: '0 1px 2px rgba(0,0,0,0.05)', hover: '#fff' } : { bg: 'transparent', bd: 'transparent', shadow: 'none', hover: '#efefef' },
       fbText: s.fbText, onFbText: e => this.setState({ fbText: e.target.value }), fbSent: s.fbSent, fbNotSent: !s.fbSent,
       fbDisabled: !s.fbText.trim(), fbOpacity: s.fbText.trim() ? 1 : 0.5,
       sendFb: () => { if (s.fbText.trim()) this.setState({ fbSent: true, fbText: '' }); },
@@ -2003,7 +1758,6 @@ class Component extends DCLogic {
         { key: 'tgWeekly', label: 'Weekly summary', sub: 'A digest every Monday morning' },
         { key: 'tgAuto', label: 'Automation alerts', sub: 'Notify me when a workflow fails' }
       ].map(t => ({ ...t, on: s[t.key], bg: s[t.key] ? '#1f2937' : '#d1d5db', left: s[t.key] ? '18px' : '2px', onClick: () => this.setState({ [t.key]: !s[t.key], setSaved: false }) })),
-      saveSettings: () => this.setState({ setSaved: true }), saveLabel: s.setSaved ? 'Saved' : 'Save changes',
       goAutomations: () => this.goAutomations(), autoCurrent: s.view === 'automations' ? 'page' : undefined,
       autoNav: s.view === 'automations' ? { bg: '#fff', bd: '#e5e7eb', shadow: '0 1px 2px rgba(0,0,0,0.05)', hover: '#fff' } : { bg: 'transparent', bd: 'transparent', shadow: 'none', hover: '#efefef' },
       ovCurrent: isOv ? 'page' : undefined, goOverview, goOverviewLink: e => { e.preventDefault(); goOverview(); },
@@ -2039,6 +1793,19 @@ class Component extends DCLogic {
       },
       chartLeave: () => {},
       bars, tip, grid, xLabels,
+      pace: (() => {
+        const targets = { 'This week': 1350, 'This month': 5600, 'Last month': 5200 };
+        const progressFrac = { 'This week': 0.92, 'This month': 0.97, 'Last month': 1 };
+        const target = targets[s.chartRange], frac = progressFrac[s.chartRange];
+        const actual = C.total, expected = target * frac, w = Math.min(100, (actual / target) * 100);
+        const ahead = actual >= expected;
+        return {
+          leadLabel: actual.toLocaleString('en-US') + ' of ' + target.toLocaleString('en-US') + ' leads',
+          status: (ahead ? '+' : '') + Math.round((actual / expected - 1) * 100) + '% vs. expected pace',
+          color: ahead ? '#059669' : '#ef4444', barColor: ahead ? '#1f2937' : '#ef4444',
+          w: w + '%', expectedLeft: Math.min(100, frac * 100) + '%', targetLabel: target.toLocaleString('en-US')
+        };
+      })(),
 
       tabs, pillTf: 'translateX(calc(' + ti + ' * (100% + 9px)))',
       cq: s.cq, onCq: e => { this.setState({ cq: e.target.value }); },
