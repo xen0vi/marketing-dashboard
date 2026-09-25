@@ -668,10 +668,11 @@ input::placeholder{color:#6b7280}
 
       <sc-if value="{{ cs.isDecidr }}" hint-placeholder-val="{{ true }}">
       <div style="display:flex; flex-direction:column; gap:16px;">
-        <section aria-label="Decidr AI case study" style="background-color:#f6f6f6; background-image:repeating-linear-gradient(135deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 7px); border:0.8px solid #ececec; border-radius:12px; padding:4px; animation:rise .52s cubic-bezier(.16,1,.3,1) both;">
+        <div style="display:flex; flex-wrap:wrap; gap:16px; align-items:stretch;">
+        <section aria-label="Decidr AI case study" style="flex:999 1 520px; min-width:0; background-color:#f6f6f6; background-image:repeating-linear-gradient(135deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 7px); border:0.8px solid #ececec; border-radius:12px; padding:4px; animation:rise .52s cubic-bezier(.16,1,.3,1) both;">
           <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; padding:6px 8px 8px; font-size:14px;"><span>Decidr AI (ASX: DAI) · Digital Marketing Specialist</span><span style="font-size:12.5px; color:#6b7280;">May 2026 – Sep 2026</span></div>
           <div style="background:#fff; border:0.8px solid #e5e7eb; border-radius:9px; padding:24px; display:flex; flex-wrap:wrap; align-items:flex-start; gap:24px;">
-            <div style="flex:999 1 460px; min-width:0; max-width:780px;">
+            <div style="flex:999 1 460px; min-width:0;">
               <div style="font-size:12px; letter-spacing:.06em; color:#6b7280;">CASE STUDY 01</div>
               <h2 style="margin:8px 0 0; font-size:28px; font-weight:500; letter-spacing:-0.02em; line-height:1.2; text-wrap:balance;">Built an enterprise B2B pipeline from zero at $150–200 per qualified lead</h2>
               <div style="margin-top:14px; padding:12px 14px; border:0.8px solid #e5e7eb; border-radius:8px; background:#fafafa; font-size:13.5px; line-height:1.55; color:#1f2937;"><span style="font-size:11.5px; letter-spacing:.06em; color:#6b7280; display:block; margin-bottom:4px;">THE PROBLEM</span>Decidr had no paid pipeline. The traffic it did get was low-intent, and nothing reached the senior buyers at 200+ employee companies that sales needed.</div>
@@ -684,7 +685,12 @@ input::placeholder{color:#6b7280}
                 <sc-for list="{{ cs.dec.chips }}" as="c" hint-placeholder-count="6"><span style="height:24px; padding:0 9px; display:flex; align-items:center; border:0.8px solid #e5e7eb; border-radius:12px; font-size:12px; color:#4b5563; background:#fafafa;">{{ c }}</span></sc-for>
               </div>
             </div>
-            <div style="flex:1 1 260px; min-width:0; display:grid; grid-template-columns:1fr; gap:12px;">
+          </div>
+        </section>
+        <section aria-label="Key results" style="flex:1 1 320px; min-width:0; display:flex; flex-direction:column; background-color:#f6f6f6; background-image:repeating-linear-gradient(135deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 7px); border:0.8px solid #ececec; border-radius:12px; padding:4px; animation:rise .52s cubic-bezier(.16,1,.3,1) .06s both;">
+          <div style="padding:6px 8px 8px; font-size:14px;">Key results</div>
+          <div style="flex:1; display:flex; background:#fff; border:0.8px solid #e5e7eb; border-radius:9px; padding:16px;">
+            <div style="flex:1; display:grid; grid-template-columns:1fr; gap:12px; align-content:start;">
               <sc-for list="{{ cs.dec.stats }}" as="st" hint-placeholder-count="4">
                 <div style="padding:16px; border-radius:9px; border:0.8px solid #e5e7eb; background:#fafafa; animation:rise .52s cubic-bezier(.16,1,.3,1) both; animation-delay:{{ st.delay }};">
                   <div style="font-size:26px; font-weight:600; letter-spacing:-0.02em; line-height:1; color:{{ st.color }}; font-variant-numeric:tabular-nums; white-space:nowrap;">{{ st.value }}</div>
@@ -695,6 +701,7 @@ input::placeholder{color:#6b7280}
             </div>
           </div>
         </section>
+        </div>
 
         <div style="display:flex; flex-wrap:wrap; gap:16px;">
           <section aria-label="Cost per qualified lead" style="display:flex; flex-direction:column; flex:999 1 520px; min-width:0; background-color:#f6f6f6; background-image:repeating-linear-gradient(135deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 7px); border:0.8px solid #ececec; border-radius:12px; padding:4px; animation:rise .52s cubic-bezier(.16,1,.3,1) .08s both;">
@@ -800,10 +807,11 @@ input::placeholder{color:#6b7280}
 
       <sc-if value="{{ cs.isAir }}" hint-placeholder-val="{{ false }}">
       <div style="display:flex; flex-direction:column; gap:16px;">
-        <section aria-label="Airtasker case study" style="background-color:#f6f6f6; background-image:repeating-linear-gradient(135deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 7px); border:0.8px solid #ececec; border-radius:12px; padding:4px; animation:rise .52s cubic-bezier(.16,1,.3,1) both;">
+        <div style="display:flex; flex-wrap:wrap; gap:16px; align-items:stretch;">
+        <section aria-label="Airtasker case study" style="flex:999 1 520px; min-width:0; background-color:#f6f6f6; background-image:repeating-linear-gradient(135deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 7px); border:0.8px solid #ececec; border-radius:12px; padding:4px; animation:rise .52s cubic-bezier(.16,1,.3,1) both;">
           <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; padding:6px 8px 8px; font-size:14px;"><span>Airtasker · Digital Marketing Specialist</span><span style="font-size:12.5px; color:#6b7280;">Aug 2022 – Mar 2026</span></div>
           <div style="background:#fff; border:0.8px solid #e5e7eb; border-radius:9px; padding:24px; display:flex; flex-wrap:wrap; align-items:flex-start; gap:24px;">
-            <div style="flex:999 1 460px; min-width:0; max-width:780px;">
+            <div style="flex:999 1 460px; min-width:0;">
               <div style="font-size:12px; letter-spacing:.06em; color:#6b7280;">CASE STUDY 02</div>
               <h2 style="margin:8px 0 0; font-size:28px; font-weight:500; letter-spacing:-0.02em; line-height:1.2; text-wrap:balance;">Cut cost per lead 64% and lifted lead-to-MQL rate 50%+</h2>
               <div style="margin-top:14px; padding:12px 14px; border:0.8px solid #e5e7eb; border-radius:8px; background:#fafafa; font-size:13.5px; line-height:1.55; color:#1f2937;"><span style="font-size:11.5px; letter-spacing:.06em; color:#6b7280; display:block; margin-bottom:4px;">THE PROBLEM</span>Paid campaigns were optimised for cheap clicks. Cost per lead sat at $250–300 and most leads never became MQLs.</div>
@@ -826,7 +834,12 @@ input::placeholder{color:#6b7280}
                 <sc-for list="{{ cs.air.chips }}" as="c" hint-placeholder-count="6"><span style="height:24px; padding:0 9px; display:flex; align-items:center; border:0.8px solid #e5e7eb; border-radius:12px; font-size:12px; color:#4b5563; background:#fafafa;">{{ c }}</span></sc-for>
               </div>
             </div>
-            <div style="flex:1 1 260px; min-width:0; display:grid; grid-template-columns:1fr; gap:12px;">
+          </div>
+        </section>
+        <section aria-label="Key results" style="flex:1 1 320px; min-width:0; display:flex; flex-direction:column; background-color:#f6f6f6; background-image:repeating-linear-gradient(135deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 7px); border:0.8px solid #ececec; border-radius:12px; padding:4px; animation:rise .52s cubic-bezier(.16,1,.3,1) .06s both;">
+          <div style="padding:6px 8px 8px; font-size:14px;">Key results</div>
+          <div style="flex:1; display:flex; background:#fff; border:0.8px solid #e5e7eb; border-radius:9px; padding:16px;">
+            <div style="flex:1; display:grid; grid-template-columns:1fr; gap:12px; align-content:start;">
               <sc-for list="{{ cs.air.stats }}" as="st" hint-placeholder-count="4">
                 <div style="padding:16px; border-radius:9px; border:0.8px solid #e5e7eb; background:#fafafa; animation:rise .52s cubic-bezier(.16,1,.3,1) both; animation-delay:{{ st.delay }};">
                   <div style="font-size:26px; font-weight:600; letter-spacing:-0.02em; line-height:1; color:{{ st.color }}; font-variant-numeric:tabular-nums; white-space:nowrap;">{{ st.value }}</div>
@@ -837,6 +850,7 @@ input::placeholder{color:#6b7280}
             </div>
           </div>
         </section>
+        </div>
 
         <div style="display:flex; flex-wrap:wrap; gap:16px;">
           <section aria-label="Cost per lead" style="display:flex; flex-direction:column; flex:999 1 520px; min-width:0; background-color:#f6f6f6; background-image:repeating-linear-gradient(135deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 7px); border:0.8px solid #ececec; border-radius:12px; padding:4px; animation:rise .52s cubic-bezier(.16,1,.3,1) .08s both;">
