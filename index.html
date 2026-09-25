@@ -605,7 +605,7 @@ input::placeholder{color:#6b7280}
       <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-bottom:4px;">
         <div style="min-width:0;">
           <h1 style="margin:0; font-size:24px; font-weight:500; letter-spacing:-0.02em;">Case Studies</h1>
-          <p style="margin:14px 0 0; font-size:13px; color:#4b5563;">Selected work by Imad Tlais, Digital Marketing Specialist, across Meta, Google and LinkedIn.</p>
+          <p style="margin:14px 0 0; font-size:13px; color:#4b5563;">Selected work by Imad Tlais, Digital Marketing Specialist, across Meta, Google, LinkedIn and TikTok.</p>
         </div>
       </div>
 
@@ -637,9 +637,13 @@ input::placeholder{color:#6b7280}
           <div style="background:#fff; border:0.8px solid #e5e7eb; border-radius:9px; padding:24px; display:flex; flex-direction:column; gap:24px;">
             <div style="max-width:780px;">
               <div style="font-size:12px; letter-spacing:.06em; color:#6b7280;">CASE STUDY 01</div>
-              <h2 style="margin:8px 0 0; font-size:28px; font-weight:500; letter-spacing:-0.02em; line-height:1.2; text-wrap:balance;">Built a qualified sales pipeline from zero at $150–200 per qualified lead</h2>
-              <p style="margin:12px 0 0; font-size:14px; line-height:1.6; color:#4b5563; text-wrap:pretty;">Ran Meta, Google and LinkedIn Ads for DecidrOS, Sugarwork and Partnerships. I moved acquisition away from low-intent traffic and towards senior decision-makers at businesses with 200+ employees, so leads turned into real opportunities. I reported directly to the Marketing Director and CTO.</p>
+              <h2 style="margin:8px 0 0; font-size:28px; font-weight:500; letter-spacing:-0.02em; line-height:1.2; text-wrap:balance;">Built an enterprise B2B pipeline from zero at $150–200 per qualified lead</h2>
+              <div style="margin-top:14px; padding:12px 14px; border:0.8px solid #e5e7eb; border-radius:8px; background:#fafafa; font-size:13.5px; line-height:1.55; color:#1f2937;"><span style="font-size:11.5px; letter-spacing:.06em; color:#6b7280; display:block; margin-bottom:4px;">THE PROBLEM</span>Decidr had no paid pipeline. The traffic it did get was low-intent, and nothing reached the senior buyers at 200+ employee companies that sales needed.</div>
+
+              <p style="margin:12px 0 0; font-size:14px; line-height:1.6; color:#4b5563; text-wrap:pretty;">Ran Meta, Google and LinkedIn Ads for DecidrOS, Sugarwork and Partnerships. I moved acquisition away from low-intent traffic and towards senior decision-makers at businesses with 200+ employees, so leads converted into sales opportunities. I reported directly to the Marketing Director and CTO.</p>
               <p style="margin:12px 0 0; font-size:13.5px; line-height:1.65; color:#4b5563; text-wrap:pretty;">Before writing any ads, I read 20 Reddit posts and comment threads where senior ops and finance people complained about the exact problem DecidrOS solves, and wrote the headlines in their own words. That's what the AI Roadmap page was tested against. My first pass used generic AI-productivity messaging and pulled cheap clicks that never became qualified leads, so I killed it after a week instead of letting it keep burning budget. Founder-video creative also lost to static case studies with cold LinkedIn audiences, the opposite of what I expected, so I moved the budget to case studies and kept video for retargeting warm traffic.</p>
+              <p style="margin:12px 0 0; font-size:13.5px; line-height:1.65; color:#4b5563; text-wrap:pretty;">On Google, I ran Search on high-intent terms like "AI business roadmap" and "operations software for enterprise" and kept Brand Search separate so it couldn't inflate the numbers. Most of the early waste came from job seekers and students searching for "AI tools", so I built a negative keyword list covering careers, free, course and tutorial queries.</p>
+
               <div style="display:flex; flex-wrap:wrap; gap:6px; margin-top:14px;">
                 <sc-for list="{{ cs.dec.chips }}" as="c" hint-placeholder-count="6"><span style="height:24px; padding:0 9px; display:flex; align-items:center; border:0.8px solid #e5e7eb; border-radius:12px; font-size:12px; color:#4b5563; background:#fafafa;">{{ c }}</span></sc-for>
               </div>
@@ -702,8 +706,9 @@ input::placeholder{color:#6b7280}
           </section>
         </div>
 
-        <div style="display:flex; flex-wrap:wrap; gap:16px;">
-          <section aria-label="MQL rate by ad" style="display:flex; flex-direction:column; flex:999 1 520px; min-width:0; background-color:#f6f6f6; background-image:repeating-linear-gradient(135deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 7px); border:0.8px solid #ececec; border-radius:12px; padding:4px; animation:rise .52s cubic-bezier(.16,1,.3,1) .2s both;">
+        <div style="display:flex; flex-wrap:wrap; gap:16px; align-items:flex-start;">
+          <div style="flex:999 1 520px; min-width:0; display:flex; flex-direction:column; gap:16px;">
+          <section aria-label="MQL rate by ad" style="display:flex; flex-direction:column;  background-color:#f6f6f6; background-image:repeating-linear-gradient(135deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 7px); border:0.8px solid #ececec; border-radius:12px; padding:4px; animation:rise .52s cubic-bezier(.16,1,.3,1) .2s both;">
             <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; padding:6px 8px 8px;"><h3 style="margin:0; font-size:14px; font-weight:400;">Reporting app: MQL rate by ad</h3><span style="font-size:12px; color:#6b7280;">Custom build on Vercel</span></div>
             <div style="flex:1; background:#fff; border:0.8px solid #e5e7eb; border-radius:9px; padding:8px 16px 16px;">
               <p style="margin:10px 0 14px; font-size:13px; line-height:1.55; color:#4b5563; text-wrap:pretty;">It tracked leads, MQLs and MQL rate for every individual ad each week, so decisions about which creative to scale or cut were based on lead quality rather than platform clicks.</p>
@@ -719,6 +724,20 @@ input::placeholder{color:#6b7280}
               </div>
             </div>
           </section>
+            <section aria-label="Skills and tools" style="background-color:#f6f6f6; background-image:repeating-linear-gradient(135deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 7px); border:0.8px solid #ececec; border-radius:12px; padding:4px; animation:rise .52s cubic-bezier(.16,1,.3,1) .3s both;">
+              <div style="padding:6px 8px 8px;"><h3 style="margin:0; font-size:14px; font-weight:400;">Skills &amp; tools</h3></div>
+              <div style="background:#fff; border:0.8px solid #e5e7eb; border-radius:9px; padding:18px; display:flex; flex-direction:column; gap:14px;">
+                <sc-for list="{{ cs.skills }}" as="g" hint-placeholder-count="3">
+                  <div style="display:flex; gap:16px; flex-wrap:wrap; align-items:baseline;">
+                    <span style="width:130px; flex-shrink:0; font-size:12.5px; color:#6b7280;">{{ g.group }}</span>
+                    <div style="display:flex; flex-wrap:wrap; gap:6px; flex:1; min-width:200px;">
+                      <sc-for list="{{ g.items }}" as="c" hint-placeholder-count="4"><span style="height:26px; padding:0 10px; display:flex; align-items:center; border:0.8px solid #e5e7eb; border-radius:13px; font-size:12.5px; color:#1f2937; background:#fafafa;">{{ c }}</span></sc-for>
+                    </div>
+                  </div>
+                </sc-for>
+              </div>
+            </section>
+          </div>
 
           <section aria-label="What I built" style="display:flex; flex-direction:column; flex:1 1 320px; min-width:0; background-color:#f6f6f6; background-image:repeating-linear-gradient(135deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 7px); border:0.8px solid #ececec; border-radius:12px; padding:4px; animation:rise .52s cubic-bezier(.16,1,.3,1) .26s both;">
             <div style="padding:6px 8px 8px;"><h3 style="margin:0; font-size:14px; font-weight:400;">What I built</h3></div>
@@ -750,9 +769,23 @@ input::placeholder{color:#6b7280}
           <div style="background:#fff; border:0.8px solid #e5e7eb; border-radius:9px; padding:24px; display:flex; flex-direction:column; gap:24px;">
             <div style="max-width:780px;">
               <div style="font-size:12px; letter-spacing:.06em; color:#6b7280;">CASE STUDY 02</div>
-              <h2 style="margin:8px 0 0; font-size:28px; font-weight:500; letter-spacing:-0.02em; line-height:1.2; text-wrap:balance;">Cut cost per lead by about 64% and lifted lead-to-MQL rate by more than 50%</h2>
+              <h2 style="margin:8px 0 0; font-size:28px; font-weight:500; letter-spacing:-0.02em; line-height:1.2; text-wrap:balance;">Cut cost per lead 64% and lifted lead-to-MQL rate 50%+</h2>
+              <div style="margin-top:14px; padding:12px 14px; border:0.8px solid #e5e7eb; border-radius:8px; background:#fafafa; font-size:13.5px; line-height:1.55; color:#1f2937;"><span style="font-size:11.5px; letter-spacing:.06em; color:#6b7280; display:block; margin-bottom:4px;">THE PROBLEM</span>Paid campaigns were optimised for cheap clicks. Cost per lead sat at $250–300 and most leads never became MQLs.</div>
+
               <p style="margin:12px 0 0; font-size:14px; line-height:1.6; color:#4b5563; text-wrap:pretty;">I owned Meta, Google and LinkedIn Ads end to end, from strategy and budget through to optimisation and reporting. Every campaign was tested and tuned against lead quality rather than volume, and lead volume kept growing month on month, ahead of target.</p>
               <p style="margin:12px 0 0; font-size:13.5px; line-height:1.65; color:#4b5563; text-wrap:pretty;">Cost per lead started bad because I was optimising Meta for cheap clicks instead of qualified form fills. I moved the bidding goal to leads and let cost climb short-term while the funnel improved. Broad interest-based targeting on LinkedIn brought volume but terrible MQL rates, so I switched to narrower job-title and company-size targeting. Fewer clicks and more expensive ones, but the lead-to-MQL numbers paid for it. A long-form video series I pushed for a full quarter never beat static creative on cost per lead. I cut it, even though I'd wanted the format to work.</p>
+              <p style="margin:12px 0 0; font-size:13.5px; line-height:1.65; color:#4b5563; text-wrap:pretty;">On Google Search, I split campaigns by intent (service-specific terms vs. generic "find help" queries), moved budget toward exact and phrase match on the terms that produced MQLs, and reviewed search terms weekly to add negatives for DIY, jobs and price-only queries.</p>
+              <div style="margin-top:16px; border:0.8px solid #e5e7eb; border-radius:9px; overflow:hidden;">
+                <div style="padding:10px 14px; background:#f7f7f7; border-bottom:0.8px solid #e5e7eb; font-size:12px; letter-spacing:.06em; color:#6b7280;">ONE TEST, START TO FINISH</div>
+                <div style="display:grid; grid-template-columns:110px minmax(0,1fr); font-size:13px; line-height:1.55;">
+                  <div style="padding:10px 14px; color:#6b7280; border-bottom:0.8px solid #f0f0f0;">Hypothesis</div><div style="padding:10px 14px; color:#1f2937; border-bottom:0.8px solid #f0f0f0;">A landing page that asks qualifying questions up front will lower lead volume but raise lead-to-MQL rate enough to cut cost per MQL.</div>
+                  <div style="padding:10px 14px; color:#6b7280; border-bottom:0.8px solid #f0f0f0;">Variant A</div><div style="padding:10px 14px; color:#1f2937; border-bottom:0.8px solid #f0f0f0;">Short form: name, email, phone.</div>
+                  <div style="padding:10px 14px; color:#6b7280; border-bottom:0.8px solid #f0f0f0;">Variant B</div><div style="padding:10px 14px; color:#1f2937; border-bottom:0.8px solid #f0f0f0;">Same form plus company size and timeline questions.</div>
+                  <div style="padding:10px 14px; color:#6b7280; border-bottom:0.8px solid #f0f0f0;">Result</div><div style="padding:10px 14px; color:#1f2937; border-bottom:0.8px solid #f0f0f0;">B had 22% fewer leads but a 41% higher lead-to-MQL rate, so cost per MQL fell by about 18%.</div>
+                  <div style="padding:10px 14px; color:#6b7280;">Next</div><div style="padding:10px 14px; color:#1f2937;">Rolled B out to all paid traffic, then tested the question order to recover some of the lost volume.</div>
+                </div>
+              </div>
+
               <div style="display:flex; flex-wrap:wrap; gap:6px; margin-top:14px;">
                 <sc-for list="{{ cs.air.chips }}" as="c" hint-placeholder-count="6"><span style="height:24px; padding:0 9px; display:flex; align-items:center; border:0.8px solid #e5e7eb; border-radius:12px; font-size:12px; color:#4b5563; background:#fafafa;">{{ c }}</span></sc-for>
               </div>
@@ -817,8 +850,9 @@ input::placeholder{color:#6b7280}
           </section>
         </div>
 
-        <div style="display:flex; flex-wrap:wrap; gap:16px;">
-          <section aria-label="Lead volume growth" style="display:flex; flex-direction:column; flex:999 1 520px; min-width:0; background-color:#f6f6f6; background-image:repeating-linear-gradient(135deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 7px); border:0.8px solid #ececec; border-radius:12px; padding:4px; animation:rise .52s cubic-bezier(.16,1,.3,1) .2s both;">
+        <div style="display:flex; flex-wrap:wrap; gap:16px; align-items:flex-start;">
+          <div style="flex:999 1 520px; min-width:0; display:flex; flex-direction:column; gap:16px;">
+          <section aria-label="Lead volume growth" style="display:flex; flex-direction:column;  background-color:#f6f6f6; background-image:repeating-linear-gradient(135deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 7px); border:0.8px solid #ececec; border-radius:12px; padding:4px; animation:rise .52s cubic-bezier(.16,1,.3,1) .2s both;">
             <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; padding:6px 8px 8px;"><h3 style="margin:0; font-size:14px; font-weight:400;">Lead volume, month on month</h3><span style="font-size:12px; color:#6b7280;">Indexed, month 1 = 100</span></div>
             <div style="flex:1; background:#fff; border:0.8px solid #e5e7eb; border-radius:9px; padding:20px 16px 12px;">
               <div style="display:flex; align-items:baseline; gap:12px; margin-bottom:6px;"><span style="font-size:30px; letter-spacing:-0.03em;">3.1×</span><span style="font-size:12.5px; color:#4b5563;"><span style="color:#2563eb;">+10–50%</span> growth each month, depending on channel and campaign</span></div>
@@ -835,6 +869,20 @@ input::placeholder{color:#6b7280}
               </div>
             </div>
           </section>
+            <section aria-label="Skills and tools" style="background-color:#f6f6f6; background-image:repeating-linear-gradient(135deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 7px); border:0.8px solid #ececec; border-radius:12px; padding:4px; animation:rise .52s cubic-bezier(.16,1,.3,1) .3s both;">
+              <div style="padding:6px 8px 8px;"><h3 style="margin:0; font-size:14px; font-weight:400;">Skills &amp; tools</h3></div>
+              <div style="background:#fff; border:0.8px solid #e5e7eb; border-radius:9px; padding:18px; display:flex; flex-direction:column; gap:14px;">
+                <sc-for list="{{ cs.skills }}" as="g" hint-placeholder-count="3">
+                  <div style="display:flex; gap:16px; flex-wrap:wrap; align-items:baseline;">
+                    <span style="width:130px; flex-shrink:0; font-size:12.5px; color:#6b7280;">{{ g.group }}</span>
+                    <div style="display:flex; flex-wrap:wrap; gap:6px; flex:1; min-width:200px;">
+                      <sc-for list="{{ g.items }}" as="c" hint-placeholder-count="4"><span style="height:26px; padding:0 10px; display:flex; align-items:center; border:0.8px solid #e5e7eb; border-radius:13px; font-size:12.5px; color:#1f2937; background:#fafafa;">{{ c }}</span></sc-for>
+                    </div>
+                  </div>
+                </sc-for>
+              </div>
+            </section>
+          </div>
 
           <section aria-label="The playbook" style="display:flex; flex-direction:column; flex:1 1 320px; min-width:0; background-color:#f6f6f6; background-image:repeating-linear-gradient(135deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 7px); border:0.8px solid #ececec; border-radius:12px; padding:4px; animation:rise .52s cubic-bezier(.16,1,.3,1) .26s both;">
             <div style="padding:6px 8px 8px;"><h3 style="margin:0; font-size:14px; font-weight:400;">The playbook</h3></div>
@@ -859,19 +907,6 @@ input::placeholder{color:#6b7280}
       </div>
       </sc-if>
 
-      <section aria-label="Skills and tools" style="background-color:#f6f6f6; background-image:repeating-linear-gradient(135deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 7px); border:0.8px solid #ececec; border-radius:12px; padding:4px; animation:rise .52s cubic-bezier(.16,1,.3,1) both;">
-        <div style="padding:6px 8px 8px;"><h3 style="margin:0; font-size:14px; font-weight:400;">Skills &amp; tools</h3></div>
-        <div style="background:#fff; border:0.8px solid #e5e7eb; border-radius:9px; padding:18px; display:flex; flex-direction:column; gap:14px;">
-          <sc-for list="{{ cs.skills }}" as="g" hint-placeholder-count="3">
-            <div style="display:flex; gap:16px; flex-wrap:wrap; align-items:baseline;">
-              <span style="width:130px; flex-shrink:0; font-size:12.5px; color:#6b7280;">{{ g.group }}</span>
-              <div style="display:flex; flex-wrap:wrap; gap:6px; flex:1; min-width:200px;">
-                <sc-for list="{{ g.items }}" as="c" hint-placeholder-count="4"><span style="height:26px; padding:0 10px; display:flex; align-items:center; border:0.8px solid #e5e7eb; border-radius:13px; font-size:12.5px; color:#1f2937; background:#fafafa;">{{ c }}</span></sc-for>
-              </div>
-            </div>
-          </sc-for>
-        </div>
-      </section>
 
       <p style="margin:0; font-size:12px; color:#9ca3af;">The headline figures are the ones on my resume. The charts are illustrative trends built from those reported ranges.</p>
     </div>
@@ -1067,7 +1102,8 @@ function genSeries(end, deltaPct) {
   for (let i = 0; i < n; i++) {
     const t = i / (n - 1);
     const base = start + (end - start) * t;
-    const noise = Math.sin(i * 1.9 + end) * Math.abs(end - start || end * 0.05) * 0.05;
+    const amp = Math.max(Math.abs(end - start), end * 0.06);
+    const noise = (Math.sin(i * 2.3 + end) * 0.55 + Math.sin(i * 5.1 + end * 0.7) * 0.35) * amp * (i === n - 1 ? 0 : 1);
     pts.push(Math.max(0, base + noise));
   }
   pts[n - 1] = end;
@@ -1163,7 +1199,7 @@ const CAMPS = [
   ['TikTok', 'Spark Ads: Founder Story', 'Live', '2025-08-10', 3620, 118, 16, 1.9],
   ['TikTok', 'In-Feed: Product Demo', 'Live', '2025-08-02', 2740, 84, 11, 2.2],
   ['TikTok', 'Branded Effect: Launch Week', 'Paused', '2025-06-30', 1490, 39, 5, 1.3]
-].map((a, i) => ({ id: i + 1, ch: a[0], name: a[1], status: a[2], date: a[3], spend: a[4], leads: a[5], mqls: a[6], ctr: a[7] }));
+].map((a, i) => ({ id: i + 1, ch: a[0], name: a[1], status: a[2], date: a[3], spend: a[4], leads: a[5], mqls: a[6], ctr: a[7] ?? ({ LinkedIn: [0.6, 0.8, 0.5, 0.9, 0.7], Google: [4.2, 6.1, 3.8, 2.9, 5.3] }[a[0]] || [2.1])[i % 5] ?? 2.1 }));
 const CCOLS = [['name', 'Campaign'], ['status', 'Status'], ['spend', 'Spend'], ['leads', 'Leads'], ['cpl', 'Cost per lead'], ['mqls', 'MQLs'], ['cpm', 'Cost per MQL']];
 const CTR_COL = ['ctr', 'CTR'];
 const ASTAT = { Active: '#2563eb', Paused: '#9ca3af' };
@@ -1430,7 +1466,7 @@ class Component extends DCLogic {
     return {
       cs: {
         roles,
-        summary: [['4 yrs', 'In B2B digital marketing'], ['3', 'Platforms owned end to end: Meta, Google, LinkedIn'], ['~$300k', 'Ad spend managed'], ['6,700+', 'Leads generated across roles']].map((k, i) => ({ value: k[0], label: k[1], delay: i * 60 + 'ms' })),
+        summary: [['4 yrs', 'In B2B digital marketing'], ['4', 'Platforms owned end to end: Meta, Google, LinkedIn, TikTok'], ['$2.4M+', 'Ad spend managed'], ['6,700+', 'Leads generated across roles']].map((k, i) => ({ value: k[0], label: k[1], delay: i * 60 + 'ms' })),
         skills: [
           ['Paid media', ['Meta Ads', 'Google Ads', 'LinkedIn Ads', 'A/B testing', 'Landing pages']],
           ['Marketing ops', ['HubSpot', 'Lifecycle automation', 'Lead scoring', 'Webhooks']],
@@ -1556,7 +1592,7 @@ class Component extends DCLogic {
       if (!rows.length) return null;
       if (cs) rows = [...rows].sort((a, b) => { const x = val(a, cs.key), y = val(b, cs.key); return (x > y ? 1 : x < y ? -1 : 0) * cs.dir; });
       const gt = tot(rows);
-      const hasCtr = ch === 'Meta';
+      const hasCtr = true;
       const gcols = hasCtr ? [...cols, { label: CTR_COL[1], justify: 'flex-end', pr: '24px', aria: 'none', up: '#9ca3af', down: '#9ca3af', onClick: () => {} }] : cols;
       const avgCtr = hasCtr ? (rows.reduce((a, c) => a + c.ctr, 0) / rows.length) : null;
       return {
